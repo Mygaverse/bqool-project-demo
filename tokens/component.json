@@ -1,0 +1,29 @@
+{
+  "button": {
+    "primary": {
+      "bg": { "value": "{action.primary}", "type": "color" },
+      "bg-hover": { "value": "{action.primary-hover}", "type": "color" },
+      "fg": { "value": "{text.inverse}", "type": "color" },
+      "radius": { "value": "{radius.md}", "type": "borderRadius" }
+    }
+  },
+  "badge": {
+    "success": {
+      "bg": { "value": "{feedback.success}", "type": "color" },
+      "fg": { "value": "{text.inverse}", "type": "color" }
+    },
+    "warning": {
+      "bg": { "value": "{feedback.warning}", "type": "color" },
+      "fg": { "value": "{text.primary}", "type": "color" }
+    },
+    "danger": {
+      "bg": { "value": "{feedback.danger}", "type": "color" },
+      "fg": { "value": "{text.inverse}", "type": "color" }
+    }
+  },
+  "card": {
+    "bg": { "value": "{surface.default}", "type": "color" },
+    "border": { "value": "{surface.border}", "type": "color" },
+    "radius": { "value": "{radius.lg}", "type": "borderRadius" }
+  }
+}

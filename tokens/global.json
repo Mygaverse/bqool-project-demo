@@ -1,0 +1,36 @@
+{
+  "color": {
+    "brand": {
+      "500": { "value": "#0873bd", "type": "color" },
+      "600": { "value": "#073b68", "type": "color" }
+    },
+    "grey": {
+      "50": { "value": "#f7f9fb", "type": "color" },
+      "200": { "value": "#e2e8f0", "type": "color" },
+      "500": { "value": "#5a6b7a", "type": "color" },
+      "900": { "value": "#17212b", "type": "color" }
+    },
+    "success": {
+      "500": { "value": "#0f9d58", "type": "color" }
+    },
+    "warning": {
+      "500": { "value": "#f2a600", "type": "color" }
+    },
+    "danger": {
+      "500": { "value": "#d63b3b", "type": "color" }
+    },
+    "white": { "value": "#ffffff", "type": "color" }
+  },
+  "space": {
+    "2": { "value": "8", "type": "spacing" },
+    "4": { "value": "16", "type": "spacing" },
+    "6": { "value": "24", "type": "spacing" },
+    "8": { "value": "32", "type": "spacing" }
+  },
+  "radius": {
+    "sm": { "value": "4", "type": "borderRadius" },
+    "md": { "value": "8", "type": "borderRadius" },
+    "lg": { "value": "16", "type": "borderRadius" },
+    "full": { "value": "999", "type": "borderRadius" }
+  }
+}

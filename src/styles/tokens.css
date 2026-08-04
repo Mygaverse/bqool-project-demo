@@ -1,0 +1,48 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-brand-500: #0873bd;
+  --color-brand-600: #073b68;
+  --color-grey-50: #f7f9fb;
+  --color-grey-200: #e2e8f0;
+  --color-grey-500: #5a6b7a;
+  --color-grey-900: #17212b;
+  --color-success-500: #0f9d58;
+  --color-warning-500: #f2a600;
+  --color-danger-500: #d63b3b;
+  --color-white: #ffffff;
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+  --text-primary: var(--color-grey-900);
+  --text-secondary: var(--color-grey-500);
+  --text-inverse: var(--color-white);
+  --surface-default: var(--color-white);
+  --surface-muted: var(--color-grey-50);
+  --surface-border: var(--color-grey-200);
+  --action-primary: var(--color-brand-500);
+  --action-primary-hover: var(--color-brand-600);
+  --feedback-success: var(--color-success-500);
+  --feedback-warning: var(--color-warning-500);
+  --feedback-danger: var(--color-danger-500);
+  --button-primary-radius: var(--radius-md);
+  --card-radius: var(--radius-lg);
+  --button-primary-bg: var(--action-primary);
+  --button-primary-bg-hover: var(--action-primary-hover);
+  --button-primary-fg: var(--text-inverse);
+  --badge-success-bg: var(--feedback-success);
+  --badge-success-fg: var(--text-inverse);
+  --badge-warning-bg: var(--feedback-warning);
+  --badge-warning-fg: var(--text-primary);
+  --badge-danger-bg: var(--feedback-danger);
+  --badge-danger-fg: var(--text-inverse);
+  --card-bg: var(--surface-default);
+  --card-border: var(--surface-border);
+}

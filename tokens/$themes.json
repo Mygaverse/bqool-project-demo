@@ -1,0 +1,11 @@
+[
+  {
+    "id": "bqool-default",
+    "name": "Default",
+    "selectedTokenSets": {
+      "global": "source",
+      "semantic": "enabled",
+      "component": "enabled"
+    }
+  }
+]
