@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <main className="min-h-screen p-token-8">
       <div className="mx-auto max-w-3xl space-y-token-6">
-        <div>
-          <h1 className="text-2xl font-semibold text-text-primary">
+        <div className="font-sans">
+          <h1 className="text-text-primary" style={{ font: 'var(--typography-heading-lg)' }}>
             BQool Design System — Token Pipeline Demo
           </h1>
-          <p className="mt-2 text-sm text-text-secondary">
+          <p className="mt-2 text-text-secondary" style={{ font: 'var(--typography-body)' }}>
             Every value on this page is generated from{' '}
             <code>tokens/*.json</code> via Style Dictionary. See{' '}
             <code>src/styles/tokens.css</code> for the generated output, and{' '}

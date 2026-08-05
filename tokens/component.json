@@ -24,6 +24,7 @@
   "card": {
     "bg": { "value": "{surface.default}", "type": "color" },
     "border": { "value": "{surface.border}", "type": "color" },
-    "radius": { "value": "{radius.lg}", "type": "borderRadius" }
+    "radius": { "value": "{radius.lg}", "type": "borderRadius" },
+    "shadow": { "value": "{elevation.resting}", "type": "boxShadow" }
   }
 }

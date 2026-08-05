@@ -44,6 +44,13 @@ const config: Config = {
         'token-lg': 'var(--radius-lg)',
         'token-full': 'var(--radius-full)',
       },
+      boxShadow: {
+        resting: 'var(--elevation-resting)',
+        raised: 'var(--elevation-raised)',
+      },
+      fontFamily: {
+        sans: 'var(--font-family-sans)',
+      },
     },
   },
   plugins: [],

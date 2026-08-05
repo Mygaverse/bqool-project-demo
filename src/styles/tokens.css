@@ -21,6 +21,23 @@
   --radius-md: 8px;
   --radius-lg: 16px;
   --radius-full: 999px;
+  --font-family-sans: Inter;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --shadow-sm: 0 1px 2px 0 #17212b1a;
+  --shadow-md: 0 4px 12px 0 #17212b26;
   --text-primary: var(--color-grey-900);
   --text-secondary: var(--color-grey-500);
   --text-inverse: var(--color-white);
@@ -32,6 +49,12 @@
   --feedback-success: var(--color-success-500);
   --feedback-warning: var(--color-warning-500);
   --feedback-danger: var(--color-danger-500);
+  --typography-heading-lg: var(--font-weight-bold) var(--font-size-3xl)/var(--line-height-tight) var(--font-family-sans);
+  --typography-heading-md: var(--font-weight-semibold) var(--font-size-xl)/var(--line-height-tight) var(--font-family-sans);
+  --typography-body: var(--font-weight-regular) var(--font-size-base)/var(--line-height-normal) var(--font-family-sans);
+  --typography-caption: var(--font-weight-medium) var(--font-size-xs)/var(--line-height-normal) var(--font-family-sans);
+  --elevation-resting: var(--shadow-sm);
+  --elevation-raised: var(--shadow-md);
   --button-primary-radius: var(--radius-md);
   --card-radius: var(--radius-lg);
   --button-primary-bg: var(--action-primary);
@@ -45,4 +68,5 @@
   --badge-danger-fg: var(--text-inverse);
   --card-bg: var(--surface-default);
   --card-border: var(--surface-border);
+  --card-shadow: var(--elevation-resting);
 }

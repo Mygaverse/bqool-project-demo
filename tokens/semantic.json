@@ -17,5 +17,47 @@
     "success": { "value": "{color.success.500}", "type": "color" },
     "warning": { "value": "{color.warning.500}", "type": "color" },
     "danger": { "value": "{color.danger.500}", "type": "color" }
+  },
+  "typography": {
+    "heading-lg": {
+      "value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.bold}",
+        "fontSize": "{fontSize.3xl}",
+        "lineHeight": "{lineHeight.tight}"
+      },
+      "type": "typography"
+    },
+    "heading-md": {
+      "value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.semibold}",
+        "fontSize": "{fontSize.xl}",
+        "lineHeight": "{lineHeight.tight}"
+      },
+      "type": "typography"
+    },
+    "body": {
+      "value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "{fontSize.base}",
+        "lineHeight": "{lineHeight.normal}"
+      },
+      "type": "typography"
+    },
+    "caption": {
+      "value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.medium}",
+        "fontSize": "{fontSize.xs}",
+        "lineHeight": "{lineHeight.normal}"
+      },
+      "type": "typography"
+    }
+  },
+  "elevation": {
+    "resting": { "value": "{shadow.sm}", "type": "boxShadow" },
+    "raised": { "value": "{shadow.md}", "type": "boxShadow" }
   }
 }

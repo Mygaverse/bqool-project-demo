@@ -12,9 +12,11 @@ type Story = StoryObj<typeof Card>;
 
 export const Default: Story = {
   render: () => (
-    <Card className="max-w-sm">
-      <h3 className="text-sm font-semibold text-text-primary">Campaign performance</h3>
-      <p className="mt-1 text-sm text-text-secondary">
+    <Card className="max-w-sm font-sans">
+      <h3 className="text-text-primary" style={{ font: 'var(--typography-heading-md)' }}>
+        Campaign performance
+      </h3>
+      <p className="mt-1 text-text-secondary" style={{ font: 'var(--typography-caption)' }}>
         Sales, spend, ACoS, orders, and trend for the last 30 days.
       </p>
       <div className="mt-4">
