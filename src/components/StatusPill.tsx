@@ -21,7 +21,7 @@ export function StatusPill({ status, onToggle }: StatusPillProps) {
       type="button"
       onClick={onToggle}
       className={clsx(
-        'inline-flex items-center gap-2 px-token-4 py-1 rounded-token-full text-xs font-semibold transition-colors',
+        'inline-flex items-center gap-token-2 px-token-4 py-token-1 rounded-token-full text-xs font-semibold transition-colors',
         status === 'enabled' && 'bg-success-500 text-text-inverse hover:opacity-90',
         status === 'paused' && 'bg-surface-muted text-text-secondary border border-surface-border',
         status === 'pending' && 'bg-warning-500 text-text-primary',

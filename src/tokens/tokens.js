@@ -12,6 +12,7 @@ export const colorSuccess500 = "#0f9d58";
 export const colorWarning500 = "#f2a600";
 export const colorDanger500 = "#d63b3b";
 export const colorWhite = "#ffffff";
+export const space1 = "4px";
 export const space2 = "8px";
 export const space4 = "16px";
 export const space6 = "24px";

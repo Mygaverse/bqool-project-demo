@@ -33,6 +33,7 @@ const config: Config = {
         },
       },
       spacing: {
+        'token-1': 'var(--space-1)',
         'token-2': 'var(--space-2)',
         'token-4': 'var(--space-4)',
         'token-6': 'var(--space-6)',
