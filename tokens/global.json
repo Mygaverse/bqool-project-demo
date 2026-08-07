@@ -19,7 +19,11 @@
     "danger": {
       "500": { "value": "#fd625e", "type": "color" }
     },
-    "white": { "value": "#ffffff", "type": "color" }
+    "white": { "value": "#ffffff", "type": "color" },
+    "overlay": {
+      "shadow-10": { "value": "rgba(33, 37, 41, 0.1)", "type": "color" },
+      "shadow-15": { "value": "rgba(33, 37, 41, 0.15)", "type": "color" }
+    }
   },
   "space": {
     "1": { "value": "4", "type": "spacing" },
@@ -55,11 +59,11 @@
   },
   "shadow": {
     "sm": {
-      "value": { "color": "rgba(33, 37, 41, 0.1)", "type": "dropShadow", "x": "0", "y": "1", "blur": "2", "spread": "0" },
+      "value": { "color": "{color.overlay.shadow-10}", "type": "dropShadow", "x": "0", "y": "1", "blur": "2", "spread": "0" },
       "type": "boxShadow"
     },
     "md": {
-      "value": { "color": "rgba(33, 37, 41, 0.15)", "type": "dropShadow", "x": "0", "y": "4", "blur": "12", "spread": "0" },
+      "value": { "color": "{color.overlay.shadow-15}", "type": "dropShadow", "x": "0", "y": "4", "blur": "12", "spread": "0" },
       "type": "boxShadow"
     }
   }

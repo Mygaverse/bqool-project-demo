@@ -13,6 +13,8 @@
   --color-warning-500: #ffc107;
   --color-danger-500: #fd625e;
   --color-white: #ffffff;
+  --color-overlay-shadow-10: rgba(33, 37, 41, 0.1);
+  --color-overlay-shadow-15: rgba(33, 37, 41, 0.15);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -35,8 +37,8 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --shadow-sm: 0 1px 2px 0 rgba(33, 37, 41, 0.1);
-  --shadow-md: 0 4px 12px 0 rgba(33, 37, 41, 0.15);
+  --shadow-sm: 0 1px 2px 0 var(--color-overlay-shadow-10);
+  --shadow-md: 0 4px 12px 0 var(--color-overlay-shadow-15);
   --text-primary: var(--color-grey-900);
   --text-secondary: var(--color-grey-500);
   --text-inverse: var(--color-white);
@@ -52,10 +54,10 @@
   --typography-heading-md: var(--font-weight-semibold) var(--font-size-xl)/24px var(--font-family-sans);
   --typography-body: var(--font-weight-regular) var(--font-size-base)/24px var(--font-family-sans);
   --typography-caption: var(--font-weight-medium) var(--font-size-xs)/18px var(--font-family-sans);
-  --elevation-resting: var(--shadow-sm);
-  --elevation-raised: var(--shadow-md);
   --button-primary-radius: var(--radius-md);
   --card-radius: var(--radius-lg);
+  --elevation-resting: var(--shadow-sm);
+  --elevation-raised: var(--shadow-md);
   --button-primary-bg: var(--action-primary);
   --button-primary-bg-hover: var(--action-primary-hover);
   --button-primary-fg: var(--text-inverse);
