@@ -24,6 +24,7 @@
   "space": {
     "1": { "value": "4", "type": "spacing" },
     "2": { "value": "8", "type": "spacing" },
+    "3": { "value": "12", "type": "spacing" },
     "4": { "value": "16", "type": "spacing" },
     "6": { "value": "24", "type": "spacing" },
     "8": { "value": "32", "type": "spacing" }
@@ -31,11 +32,11 @@
   "radius": {
     "sm": { "value": "4", "type": "borderRadius" },
     "md": { "value": "8", "type": "borderRadius" },
-    "lg": { "value": "16", "type": "borderRadius" },
+    "lg": { "value": "10", "type": "borderRadius" },
     "full": { "value": "999", "type": "borderRadius" }
   },
   "fontFamily": {
-    "sans": { "value": "Inter", "type": "fontFamilies" }
+    "sans": { "value": "Nokora", "type": "fontFamilies" }
   },
   "fontSize": {
     "xs": { "value": "12", "type": "fontSizes" },
@@ -51,11 +52,6 @@
     "medium": { "value": "500", "type": "fontWeights" },
     "semibold": { "value": "600", "type": "fontWeights" },
     "bold": { "value": "700", "type": "fontWeights" }
-  },
-  "lineHeight": {
-    "tight": { "value": "1.2", "type": "lineHeights" },
-    "normal": { "value": "1.5", "type": "lineHeights" },
-    "relaxed": { "value": "1.75", "type": "lineHeights" }
   },
   "shadow": {
     "sm": {
