@@ -3,15 +3,15 @@
  */
 
 :root {
-  --color-brand-500: #0873bd;
-  --color-brand-600: #073b68;
+  --color-brand-500: #4aaada;
+  --color-brand-600: #3a9aca;
   --color-grey-50: #f7f9fb;
-  --color-grey-200: #e2e8f0;
+  --color-grey-200: #e2e2e2;
   --color-grey-500: #5a6b7a;
-  --color-grey-900: #17212b;
-  --color-success-500: #0f9d58;
-  --color-warning-500: #f2a600;
-  --color-danger-500: #d63b3b;
+  --color-grey-900: #212529;
+  --color-success-500: #76b548;
+  --color-warning-500: #ffc107;
+  --color-danger-500: #fd625e;
   --color-white: #ffffff;
   --space-1: 4px;
   --space-2: 8px;
@@ -37,8 +37,8 @@
   --line-height-tight: 1.2;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
-  --shadow-sm: 0 1px 2px 0 #17212b1a;
-  --shadow-md: 0 4px 12px 0 #17212b26;
+  --shadow-sm: 0 1px 2px 0 #2125291a;
+  --shadow-md: 0 4px 12px 0 #21252926;
   --text-primary: var(--color-grey-900);
   --text-secondary: var(--color-grey-500);
   --text-inverse: var(--color-white);
