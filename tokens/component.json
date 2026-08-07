@@ -1,30 +1,30 @@
 {
   "button": {
     "primary": {
-      "bg": { "value": "{action.primary}", "type": "color" },
-      "bg-hover": { "value": "{action.primary-hover}", "type": "color" },
-      "fg": { "value": "{text.inverse}", "type": "color" },
-      "radius": { "value": "{radius.md}", "type": "borderRadius" }
+      "bg": { "$type": "color", "$value": "{action.primary}" },
+      "bg-hover": { "$type": "color", "$value": "{action.primary-hover}" },
+      "fg": { "$type": "color", "$value": "{text.inverse}" },
+      "radius": { "$type": "borderRadius", "$value": "{radius.md}" }
     }
   },
   "badge": {
     "success": {
-      "bg": { "value": "{feedback.success}", "type": "color" },
-      "fg": { "value": "{text.inverse}", "type": "color" }
+      "bg": { "$type": "color", "$value": "{feedback.success}" },
+      "fg": { "$type": "color", "$value": "{text.inverse}" }
     },
     "warning": {
-      "bg": { "value": "{feedback.warning}", "type": "color" },
-      "fg": { "value": "{text.primary}", "type": "color" }
+      "bg": { "$type": "color", "$value": "{feedback.warning}" },
+      "fg": { "$type": "color", "$value": "{text.primary}" }
     },
     "danger": {
-      "bg": { "value": "{feedback.danger}", "type": "color" },
-      "fg": { "value": "{text.inverse}", "type": "color" }
+      "bg": { "$type": "color", "$value": "{feedback.danger}" },
+      "fg": { "$type": "color", "$value": "{text.inverse}" }
     }
   },
   "card": {
-    "bg": { "value": "{surface.default}", "type": "color" },
-    "border": { "value": "{surface.border}", "type": "color" },
-    "radius": { "value": "{radius.lg}", "type": "borderRadius" },
-    "shadow": { "value": "{elevation.resting}", "type": "boxShadow" }
+    "bg": { "$type": "color", "$value": "{surface.default}" },
+    "border": { "$type": "color", "$value": "{surface.border}" },
+    "radius": { "$type": "borderRadius", "$value": "{radius.lg}" },
+    "shadow": { "$type": "boxShadow", "$value": "{elevation.resting}" }
   }
 }
