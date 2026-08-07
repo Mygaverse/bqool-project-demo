@@ -35,8 +35,8 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --shadow-sm: 0 1px 2px 0 #2125291a;
-  --shadow-md: 0 4px 12px 0 #21252926;
+  --shadow-sm: 0 1px 2px 0 rgba(33, 37, 41, 0.1);
+  --shadow-md: 0 4px 12px 0 rgba(33, 37, 41, 0.15);
   --text-primary: var(--color-grey-900);
   --text-secondary: var(--color-grey-500);
   --text-inverse: var(--color-white);

@@ -55,11 +55,11 @@
   },
   "shadow": {
     "sm": {
-      "value": { "color": "#2125291a", "type": "dropShadow", "x": "0", "y": "1", "blur": "2", "spread": "0" },
+      "value": { "color": "rgba(33, 37, 41, 0.1)", "type": "dropShadow", "x": "0", "y": "1", "blur": "2", "spread": "0" },
       "type": "boxShadow"
     },
     "md": {
-      "value": { "color": "#21252926", "type": "dropShadow", "x": "0", "y": "4", "blur": "12", "spread": "0" },
+      "value": { "color": "rgba(33, 37, 41, 0.15)", "type": "dropShadow", "x": "0", "y": "4", "blur": "12", "spread": "0" },
       "type": "boxShadow"
     }
   }
