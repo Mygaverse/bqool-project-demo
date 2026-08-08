@@ -1,12 +1,14 @@
 {
   "color": {
     "brand": {
+      "50": { "$type": "color", "$value": "#f1f7ff" },
       "500": { "$type": "color", "$value": "#4aaada" },
       "600": { "$type": "color", "$value": "#3a9aca" }
     },
     "grey": {
       "50": { "$type": "color", "$value": "#f7f9fb" },
       "200": { "$type": "color", "$value": "#e2e2e2" },
+      "400": { "$type": "color", "$value": "#b2b2b2" },
       "500": { "$type": "color", "$value": "#5a6b7a" },
       "900": { "$type": "color", "$value": "#212529" }
     },
@@ -20,14 +22,12 @@
       "500": { "$type": "color", "$value": "#fd625e" }
     },
     "white": { "$type": "color", "$value": "#ffffff" },
-    "tint": {
-      "brand": { "$type": "color", "$value": "#f1f7ff" }
-    },
     "overlay": {
       "shadow-10": { "$type": "color", "$value": "rgba(33, 37, 41, 0.1)" },
       "shadow-15": { "$type": "color", "$value": "rgba(33, 37, 41, 0.15)" },
-      "success-15": { "$type": "color", "$value": "rgba(118, 181, 72, 0.15)" },
-      "danger-15": { "$type": "color", "$value": "rgba(253, 98, 94, 0.15)" }
+      "success-20": { "$type": "color", "$value": "rgba(118, 181, 72, 0.2)" },
+      "warning-20": { "$type": "color", "$value": "rgba(255, 193, 7, 0.2)" },
+      "danger-20": { "$type": "color", "$value": "rgba(253, 98, 94, 0.2)" }
     }
   },
   "space": {

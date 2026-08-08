@@ -8,7 +8,7 @@
     "default": { "$type": "color", "$value": "{color.white}" },
     "muted": { "$type": "color", "$value": "{color.grey.50}" },
     "border": { "$type": "color", "$value": "{color.grey.200}" },
-    "selected": { "$type": "color", "$value": "{color.tint.brand}" }
+    "selected": { "$type": "color", "$value": "{color.brand.50}" }
   },
   "action": {
     "primary": { "$type": "color", "$value": "{color.brand.500}" },

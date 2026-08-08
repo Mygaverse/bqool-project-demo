@@ -2,21 +2,23 @@
  * Do not edit directly, this file was auto-generated.
  */
 
+export const colorBrand50 = "#f1f7ff";
 export const colorBrand500 = "#4aaada";
 export const colorBrand600 = "#3a9aca";
 export const colorGrey50 = "#f7f9fb";
 export const colorGrey200 = "#e2e2e2";
+export const colorGrey400 = "#b2b2b2";
 export const colorGrey500 = "#5a6b7a";
 export const colorGrey900 = "#212529";
 export const colorSuccess500 = "#76b548";
 export const colorWarning500 = "#ffc107";
 export const colorDanger500 = "#fd625e";
 export const colorWhite = "#ffffff";
-export const colorTintBrand = "#f1f7ff";
 export const colorOverlayShadow10 = "rgba(33, 37, 41, 0.1)";
 export const colorOverlayShadow15 = "rgba(33, 37, 41, 0.15)";
-export const colorOverlaySuccess15 = "rgba(118, 181, 72, 0.15)";
-export const colorOverlayDanger15 = "rgba(253, 98, 94, 0.15)";
+export const colorOverlaySuccess20 = "rgba(118, 181, 72, 0.2)";
+export const colorOverlayWarning20 = "rgba(255, 193, 7, 0.2)";
+export const colorOverlayDanger20 = "rgba(253, 98, 94, 0.2)";
 export const space1 = "4px";
 export const space2 = "8px";
 export const space3 = "12px";
@@ -84,9 +86,9 @@ export const cardRadius = "10px";
 export const cardShadow = "0 1px 2px 0 rgba(33, 37, 41, 0.1)";
 export const cardSelectedBg = "#f1f7ff";
 export const cardSelectedBorder = "#4aaada";
-export const trendPillPositiveBg = "rgba(118, 181, 72, 0.15)";
+export const trendPillPositiveBg = "rgba(118, 181, 72, 0.2)";
 export const trendPillPositiveFg = "#76b548";
-export const trendPillNegativeBg = "rgba(253, 98, 94, 0.15)";
+export const trendPillNegativeBg = "rgba(253, 98, 94, 0.2)";
 export const trendPillNegativeFg = "#fd625e";
 export const deliveryStatusDelivering = "#76b548";
 export const deliveryStatusLimited = "#ffc107";
