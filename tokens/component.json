@@ -38,6 +38,25 @@
     "bg": { "$type": "color", "$value": "{surface.default}" },
     "border": { "$type": "color", "$value": "{surface.border}" },
     "radius": { "$type": "borderRadius", "$value": "{radius.lg}" },
-    "shadow": { "$type": "boxShadow", "$value": "{elevation.resting}" }
+    "shadow": { "$type": "boxShadow", "$value": "{elevation.resting}" },
+    "selected": {
+      "bg": { "$type": "color", "$value": "{surface.selected}" },
+      "border": { "$type": "color", "$value": "{action.primary}" }
+    }
+  },
+  "trendPill": {
+    "positive": {
+      "bg": { "$type": "color", "$value": "{color.overlay.success-15}" },
+      "fg": { "$type": "color", "$value": "{feedback.success}" }
+    },
+    "negative": {
+      "bg": { "$type": "color", "$value": "{color.overlay.danger-15}" },
+      "fg": { "$type": "color", "$value": "{feedback.danger}" }
+    }
+  },
+  "deliveryStatus": {
+    "delivering": { "$type": "color", "$value": "{feedback.success}" },
+    "limited": { "$type": "color", "$value": "{feedback.warning}" },
+    "not-delivering": { "$type": "color", "$value": "{feedback.danger}" }
   }
 }

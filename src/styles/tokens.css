@@ -13,8 +13,11 @@
   --color-warning-500: #ffc107;
   --color-danger-500: #fd625e;
   --color-white: #ffffff;
+  --color-tint-brand: #f1f7ff;
   --color-overlay-shadow-10: rgba(33, 37, 41, 0.1);
   --color-overlay-shadow-15: rgba(33, 37, 41, 0.15);
+  --color-overlay-success-15: rgba(118, 181, 72, 0.15);
+  --color-overlay-danger-15: rgba(253, 98, 94, 0.15);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -45,6 +48,7 @@
   --surface-default: var(--color-white);
   --surface-muted: var(--color-grey-50);
   --surface-border: var(--color-grey-200);
+  --surface-selected: var(--color-tint-brand);
   --action-primary: var(--color-brand-500);
   --action-primary-hover: var(--color-brand-600);
   --feedback-success: var(--color-success-500);
@@ -57,6 +61,8 @@
   --button-primary-radius: var(--radius-md);
   --toggle-knob: var(--color-white);
   --card-radius: var(--radius-lg);
+  --trend-pill-positive-bg: var(--color-overlay-success-15);
+  --trend-pill-negative-bg: var(--color-overlay-danger-15);
   --elevation-resting: var(--shadow-sm);
   --elevation-raised: var(--shadow-md);
   --button-primary-bg: var(--action-primary);
@@ -78,5 +84,12 @@
   --toggle-track-off: var(--surface-border);
   --card-bg: var(--surface-default);
   --card-border: var(--surface-border);
+  --card-selected-bg: var(--surface-selected);
+  --card-selected-border: var(--action-primary);
+  --trend-pill-positive-fg: var(--feedback-success);
+  --trend-pill-negative-fg: var(--feedback-danger);
+  --delivery-status-delivering: var(--feedback-success);
+  --delivery-status-limited: var(--feedback-warning);
+  --delivery-status-not-delivering: var(--feedback-danger);
   --card-shadow: var(--elevation-resting);
 }

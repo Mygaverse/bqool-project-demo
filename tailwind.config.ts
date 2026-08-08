@@ -30,6 +30,7 @@ const config: Config = {
           default: 'var(--surface-default)',
           muted: 'var(--surface-muted)',
           border: 'var(--surface-border)',
+          selected: 'var(--surface-selected)',
         },
         action: {
           primary: 'var(--action-primary)',
@@ -44,6 +45,17 @@ const config: Config = {
           'track-on': 'var(--toggle-track-on)',
           'track-off': 'var(--toggle-track-off)',
           knob: 'var(--toggle-knob)',
+        },
+        'trend-pill': {
+          'positive-bg': 'var(--trend-pill-positive-bg)',
+          'positive-fg': 'var(--trend-pill-positive-fg)',
+          'negative-bg': 'var(--trend-pill-negative-bg)',
+          'negative-fg': 'var(--trend-pill-negative-fg)',
+        },
+        'delivery-status': {
+          delivering: 'var(--delivery-status-delivering)',
+          limited: 'var(--delivery-status-limited)',
+          'not-delivering': 'var(--delivery-status-not-delivering)',
         },
       },
       spacing: {
