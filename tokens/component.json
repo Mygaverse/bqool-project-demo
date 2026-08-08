@@ -8,18 +8,31 @@
     }
   },
   "badge": {
+    "neutral": {
+      "bg": { "$type": "color", "$value": "{surface.default}" },
+      "border": { "$type": "color", "$value": "{surface.border}" },
+      "fg": { "$type": "color", "$value": "{text.secondary}" }
+    },
     "success": {
-      "bg": { "$type": "color", "$value": "{feedback.success}" },
-      "fg": { "$type": "color", "$value": "{text.inverse}" }
+      "bg": { "$type": "color", "$value": "{surface.default}" },
+      "border": { "$type": "color", "$value": "{feedback.success}" },
+      "fg": { "$type": "color", "$value": "{feedback.success}" }
     },
     "warning": {
-      "bg": { "$type": "color", "$value": "{feedback.warning}" },
-      "fg": { "$type": "color", "$value": "{text.primary}" }
+      "bg": { "$type": "color", "$value": "{surface.default}" },
+      "border": { "$type": "color", "$value": "{feedback.warning}" },
+      "fg": { "$type": "color", "$value": "{feedback.warning}" }
     },
     "danger": {
-      "bg": { "$type": "color", "$value": "{feedback.danger}" },
-      "fg": { "$type": "color", "$value": "{text.inverse}" }
+      "bg": { "$type": "color", "$value": "{surface.default}" },
+      "border": { "$type": "color", "$value": "{feedback.danger}" },
+      "fg": { "$type": "color", "$value": "{feedback.danger}" }
     }
+  },
+  "toggle": {
+    "track-on": { "$type": "color", "$value": "{action.primary}" },
+    "track-off": { "$type": "color", "$value": "{surface.border}" },
+    "knob": { "$type": "color", "$value": "{color.white}" }
   },
   "card": {
     "bg": { "$type": "color", "$value": "{surface.default}" },

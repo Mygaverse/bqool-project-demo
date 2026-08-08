@@ -9,6 +9,7 @@ export default meta;
 
 type Story = StoryObj<typeof Badge>;
 
+export const Neutral: Story = { args: { tone: 'neutral', children: 'Auto-Budgeting' } };
 export const Success: Story = { args: { tone: 'success', children: 'Shipped' } };
 export const Warning: Story = { args: { tone: 'warning', children: 'In review' } };
 export const Danger: Story = { args: { tone: 'danger', children: 'Blocked' } };

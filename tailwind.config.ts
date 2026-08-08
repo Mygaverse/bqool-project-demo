@@ -40,6 +40,11 @@ const config: Config = {
           warning: 'var(--feedback-warning)',
           danger: 'var(--feedback-danger)',
         },
+        toggle: {
+          'track-on': 'var(--toggle-track-on)',
+          'track-off': 'var(--toggle-track-off)',
+          knob: 'var(--toggle-knob)',
+        },
       },
       spacing: {
         'token-1': 'var(--space-1)',
