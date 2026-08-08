@@ -10,8 +10,8 @@ export function Input({ invalid, className, ...props }: InputProps) {
     <input
       className={clsx(
         'w-full px-token-4 py-token-2 rounded-token-md border bg-surface-default text-text-primary text-sm',
-        'focus:outline-none focus:ring-2 focus:ring-brand-500',
-        invalid ? 'border-danger-500' : 'border-surface-border',
+        'focus:outline-none focus:ring-2 focus:ring-action-primary',
+        invalid ? 'border-feedback-danger' : 'border-surface-border',
         className,
       )}
       {...props}

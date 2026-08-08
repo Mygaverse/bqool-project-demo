@@ -31,6 +31,15 @@ const config: Config = {
           muted: 'var(--surface-muted)',
           border: 'var(--surface-border)',
         },
+        action: {
+          primary: 'var(--action-primary)',
+          'primary-hover': 'var(--action-primary-hover)',
+        },
+        feedback: {
+          success: 'var(--feedback-success)',
+          warning: 'var(--feedback-warning)',
+          danger: 'var(--feedback-danger)',
+        },
       },
       spacing: {
         'token-1': 'var(--space-1)',

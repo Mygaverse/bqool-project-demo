@@ -10,9 +10,9 @@ export function Badge({ tone = 'success', className, ...props }: BadgeProps) {
     <span
       className={clsx(
         'inline-flex items-center px-token-4 py-token-1 rounded-token-full text-xs font-semibold uppercase tracking-wide',
-        tone === 'success' && 'bg-success-500 text-text-inverse',
-        tone === 'warning' && 'bg-warning-500 text-text-primary',
-        tone === 'danger' && 'bg-danger-500 text-text-inverse',
+        tone === 'success' && 'bg-feedback-success text-text-inverse',
+        tone === 'warning' && 'bg-feedback-warning text-text-primary',
+        tone === 'danger' && 'bg-feedback-danger text-text-inverse',
         className,
       )}
       {...props}
