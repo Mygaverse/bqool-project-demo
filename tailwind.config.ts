@@ -25,12 +25,14 @@ const config: Config = {
           primary: 'var(--text-primary)',
           secondary: 'var(--text-secondary)',
           inverse: 'var(--text-inverse)',
+          disabled: 'var(--text-disabled)',
         },
         surface: {
           default: 'var(--surface-default)',
           muted: 'var(--surface-muted)',
           border: 'var(--surface-border)',
           selected: 'var(--surface-selected)',
+          disabled: 'var(--surface-disabled)',
         },
         action: {
           primary: 'var(--action-primary)',
@@ -40,6 +42,9 @@ const config: Config = {
           success: 'var(--feedback-success)',
           warning: 'var(--feedback-warning)',
           danger: 'var(--feedback-danger)',
+          'success-tint': 'var(--color-overlay-success-15)',
+          'warning-tint': 'var(--color-overlay-warning-15)',
+          'danger-tint': 'var(--color-overlay-danger-15)',
         },
         toggle: {
           'track-on': 'var(--toggle-track-on)',
@@ -54,7 +59,7 @@ const config: Config = {
         },
         'delivery-status': {
           delivering: 'var(--delivery-status-delivering)',
-          limited: 'var(--delivery-status-limited)',
+          pending: 'var(--delivery-status-pending)',
           'not-delivering': 'var(--delivery-status-not-delivering)',
         },
       },

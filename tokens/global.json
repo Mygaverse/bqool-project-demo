@@ -30,7 +30,9 @@
       "shadow-15": { "$type": "color", "$value": "rgba(33, 37, 41, 0.15)" },
       "success-15": { "$type": "color", "$value": "rgba(118, 181, 72, 0.15)" },
       "warning-15": { "$type": "color", "$value": "rgba(255, 193, 7, 0.15)" },
-      "danger-15": { "$type": "color", "$value": "rgba(253, 98, 94, 0.15)" }
+      "danger-15": { "$type": "color", "$value": "rgba(253, 98, 94, 0.15)" },
+      "muted-40": { "$type": "color", "$value": "rgba(178, 178, 178, 0.4)" },
+      "ink-40": { "$type": "color", "$value": "rgba(33, 37, 41, 0.4)" }
     }
   },
   "space": {

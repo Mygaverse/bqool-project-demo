@@ -13,6 +13,7 @@ export function Button({ variant = 'primary', className, ...props }: ButtonProps
         variant === 'primary' && 'bg-action-primary text-text-inverse hover:bg-action-primary-hover',
         variant === 'secondary' &&
           'bg-surface-default text-text-primary border border-surface-border hover:bg-action-primary hover:text-text-inverse hover:border-action-primary',
+        'disabled:cursor-not-allowed disabled:bg-surface-disabled disabled:text-text-disabled disabled:border-surface-disabled disabled:hover:bg-surface-disabled disabled:hover:text-text-disabled disabled:hover:border-surface-disabled',
         className,
       )}
       {...props}

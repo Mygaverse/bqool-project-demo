@@ -13,3 +13,8 @@ export const Neutral: Story = { args: { tone: 'neutral', children: 'Auto-Budgeti
 export const Success: Story = { args: { tone: 'success', children: 'Shipped' } };
 export const Warning: Story = { args: { tone: 'warning', children: 'In review' } };
 export const Danger: Story = { args: { tone: 'danger', children: 'Blocked' } };
+
+export const NeutralSolid: Story = { args: { tone: 'neutral', emphasis: 'solid', children: 'Auto-Budgeting' } };
+export const SuccessSolid: Story = { args: { tone: 'success', emphasis: 'solid', children: 'Auto-Budgeting' } };
+export const WarningSolid: Story = { args: { tone: 'warning', emphasis: 'solid', children: 'Auto-Budgeting' } };
+export const DangerSolid: Story = { args: { tone: 'danger', emphasis: 'solid', children: 'Auto-Budgeting' } };

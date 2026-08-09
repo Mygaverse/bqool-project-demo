@@ -3,13 +3,15 @@
     "primary": { "$type": "color", "$value": "{color.grey.900}" },
     "secondary": { "$type": "color", "$value": "{color.grey.500}" },
     "inverse": { "$type": "color", "$value": "{color.white}" },
-    "brand": { "$type": "color", "$value": "{color.brand.500}" }
+    "brand": { "$type": "color", "$value": "{color.brand.500}" },
+    "disabled": { "$type": "color", "$value": "{color.overlay.ink-40}" }
   },
   "surface": {
     "default": { "$type": "color", "$value": "{color.white}" },
     "muted": { "$type": "color", "$value": "{color.grey.400}" },
     "border": { "$type": "color", "$value": "{color.grey.200}" },
-    "selected": { "$type": "color", "$value": "{color.tint.brand}" }
+    "selected": { "$type": "color", "$value": "{color.tint.brand}" },
+    "disabled": { "$type": "color", "$value": "{color.overlay.muted-40}" }
   },
   "action": {
     "primary": { "$type": "color", "$value": "{color.brand.500}" },

@@ -4,29 +4,61 @@
       "bg": { "$type": "color", "$value": "{action.primary}" },
       "bg-hover": { "$type": "color", "$value": "{action.primary-hover}" },
       "fg": { "$type": "color", "$value": "{text.inverse}" },
-      "radius": { "$type": "borderRadius", "$value": "{radius.md}" }
+      "radius": { "$type": "borderRadius", "$value": "{radius.md}" },
+      "bg-disabled": { "$type": "color", "$value": "{surface.disabled}" },
+      "fg-disabled": { "$type": "color", "$value": "{text.disabled}" }
+    },
+    "secondary": {
+      "bg": { "$type": "color", "$value": "{surface.default}" },
+      "bg-hover": { "$type": "color", "$value": "{action.primary}" },
+      "fg": { "$type": "color", "$value": "{text.primary}" },
+      "fg-hover": { "$type": "color", "$value": "{text.inverse}" },
+      "border": { "$type": "color", "$value": "{surface.border}" },
+      "border-hover": { "$type": "color", "$value": "{action.primary}" },
+      "bg-disabled": { "$type": "color", "$value": "{surface.disabled}" },
+      "fg-disabled": { "$type": "color", "$value": "{text.disabled}" }
     }
   },
   "badge": {
-    "neutral": {
-      "bg": { "$type": "color", "$value": "{surface.default}" },
-      "border": { "$type": "color", "$value": "{surface.border}" },
-      "fg": { "$type": "color", "$value": "{text.secondary}" }
+    "outline": {
+      "neutral": {
+        "bg": { "$type": "color", "$value": "{surface.default}" },
+        "border": { "$type": "color", "$value": "{surface.border}" },
+        "fg": { "$type": "color", "$value": "{text.secondary}" }
+      },
+      "success": {
+        "bg": { "$type": "color", "$value": "{surface.default}" },
+        "border": { "$type": "color", "$value": "{feedback.success}" },
+        "fg": { "$type": "color", "$value": "{feedback.success}" }
+      },
+      "warning": {
+        "bg": { "$type": "color", "$value": "{surface.default}" },
+        "border": { "$type": "color", "$value": "{feedback.warning}" },
+        "fg": { "$type": "color", "$value": "{feedback.warning}" }
+      },
+      "danger": {
+        "bg": { "$type": "color", "$value": "{surface.default}" },
+        "border": { "$type": "color", "$value": "{feedback.danger}" },
+        "fg": { "$type": "color", "$value": "{feedback.danger}" }
+      }
     },
-    "success": {
-      "bg": { "$type": "color", "$value": "{surface.default}" },
-      "border": { "$type": "color", "$value": "{feedback.success}" },
-      "fg": { "$type": "color", "$value": "{feedback.success}" }
-    },
-    "warning": {
-      "bg": { "$type": "color", "$value": "{surface.default}" },
-      "border": { "$type": "color", "$value": "{feedback.warning}" },
-      "fg": { "$type": "color", "$value": "{feedback.warning}" }
-    },
-    "danger": {
-      "bg": { "$type": "color", "$value": "{surface.default}" },
-      "border": { "$type": "color", "$value": "{feedback.danger}" },
-      "fg": { "$type": "color", "$value": "{feedback.danger}" }
+    "solid": {
+      "neutral": {
+        "bg": { "$type": "color", "$value": "{text.secondary}" },
+        "fg": { "$type": "color", "$value": "{text.inverse}" }
+      },
+      "success": {
+        "bg": { "$type": "color", "$value": "{color.overlay.success-15}" },
+        "fg": { "$type": "color", "$value": "{feedback.success}" }
+      },
+      "warning": {
+        "bg": { "$type": "color", "$value": "{color.overlay.warning-15}" },
+        "fg": { "$type": "color", "$value": "{feedback.warning}" }
+      },
+      "danger": {
+        "bg": { "$type": "color", "$value": "{color.overlay.danger-15}" },
+        "fg": { "$type": "color", "$value": "{feedback.danger}" }
+      }
     }
   },
   "toggle": {
@@ -56,7 +88,22 @@
   },
   "deliveryStatus": {
     "delivering": { "$type": "color", "$value": "{feedback.success}" },
-    "limited": { "$type": "color", "$value": "{feedback.warning}" },
+    "pending": { "$type": "color", "$value": "{feedback.warning}" },
     "not-delivering": { "$type": "color", "$value": "{feedback.danger}" }
+  },
+  "statusPill": {
+    "enabled": {
+      "bg": { "$type": "color", "$value": "{action.primary}" },
+      "fg": { "$type": "color", "$value": "{text.inverse}" }
+    },
+    "paused": {
+      "bg": { "$type": "color", "$value": "{surface.muted}" },
+      "fg": { "$type": "color", "$value": "{text.inverse}" }
+    },
+    "pending": {
+      "bg": { "$type": "color", "$value": "{surface.default}" },
+      "fg": { "$type": "color", "$value": "{action.primary}" },
+      "border": { "$type": "color", "$value": "{action.primary}" }
+    }
   }
 }

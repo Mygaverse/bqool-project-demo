@@ -8,7 +8,7 @@ export interface StatusPillProps {
 const LABEL: Record<StatusPillProps['status'], string> = {
   enabled: 'Enabled',
   paused: 'Paused',
-  pending: 'Pending review',
+  pending: 'Pending...',
 };
 
 /**
@@ -22,17 +22,17 @@ export function StatusPill({ status, onToggle }: StatusPillProps) {
       onClick={onToggle}
       className={clsx(
         'inline-flex items-center gap-token-2 px-token-4 py-token-1 rounded-token-full text-xs font-semibold transition-colors',
-        status === 'enabled' && 'bg-feedback-success text-text-inverse hover:opacity-90',
-        status === 'paused' && 'bg-surface-muted text-text-secondary border border-surface-border',
-        status === 'pending' && 'bg-feedback-warning text-text-primary',
+        status === 'enabled' && 'bg-action-primary text-text-inverse hover:bg-action-primary-hover',
+        status === 'paused' && 'bg-surface-muted text-text-inverse',
+        status === 'pending' && 'bg-surface-default text-action-primary border border-action-primary',
       )}
     >
       <span
         className={clsx(
           'h-1.5 w-1.5 rounded-full',
           status === 'enabled' && 'bg-text-inverse',
-          status === 'paused' && 'bg-text-secondary',
-          status === 'pending' && 'bg-text-primary',
+          status === 'paused' && 'bg-text-inverse',
+          status === 'pending' && 'bg-action-primary',
         )}
       />
       {LABEL[status]}
