@@ -48,15 +48,15 @@
         "fg": { "$type": "color", "$value": "{text.inverse}" }
       },
       "success": {
-        "bg": { "$type": "color", "$value": "{color.overlay.success-15}" },
+        "bg": { "$type": "color", "$value": "{color.overlay.success-20}" },
         "fg": { "$type": "color", "$value": "{feedback.success}" }
       },
       "warning": {
-        "bg": { "$type": "color", "$value": "{color.overlay.warning-15}" },
+        "bg": { "$type": "color", "$value": "{color.overlay.warning-20}" },
         "fg": { "$type": "color", "$value": "{feedback.warning}" }
       },
       "danger": {
-        "bg": { "$type": "color", "$value": "{color.overlay.danger-15}" },
+        "bg": { "$type": "color", "$value": "{color.overlay.danger-20}" },
         "fg": { "$type": "color", "$value": "{feedback.danger}" }
       }
     }
@@ -78,11 +78,11 @@
   },
   "trendPill": {
     "positive": {
-      "bg": { "$type": "color", "$value": "{color.overlay.success-15}" },
+      "bg": { "$type": "color", "$value": "{color.overlay.success-20}" },
       "fg": { "$type": "color", "$value": "{feedback.success}" }
     },
     "negative": {
-      "bg": { "$type": "color", "$value": "{color.overlay.danger-15}" },
+      "bg": { "$type": "color", "$value": "{color.overlay.danger-20}" },
       "fg": { "$type": "color", "$value": "{feedback.danger}" }
     }
   },

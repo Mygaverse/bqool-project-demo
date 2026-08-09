@@ -37,6 +37,7 @@ const config: Config = {
         action: {
           primary: 'var(--action-primary)',
           'primary-hover': 'var(--action-primary-hover)',
+          theme: 'var(--action-theme)',
         },
         feedback: {
           success: 'var(--feedback-success)',
