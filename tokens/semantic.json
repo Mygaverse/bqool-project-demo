@@ -2,17 +2,21 @@
   "text": {
     "primary": { "$type": "color", "$value": "{color.grey.900}" },
     "secondary": { "$type": "color", "$value": "{color.grey.500}" },
-    "inverse": { "$type": "color", "$value": "{color.white}" }
+    "inverse": { "$type": "color", "$value": "{color.white}" },
+    "brand": { "$type": "color", "$value": "{color.brand.500}" }
   },
   "surface": {
     "default": { "$type": "color", "$value": "{color.white}" },
-    "muted": { "$type": "color", "$value": "{color.grey.50}" },
+    "muted": { "$type": "color", "$value": "{color.grey.400}" },
     "border": { "$type": "color", "$value": "{color.grey.200}" },
-    "selected": { "$type": "color", "$value": "{color.brand.50}" }
+    "selected": { "$type": "color", "$value": "{color.tint.brand}" }
   },
   "action": {
     "primary": { "$type": "color", "$value": "{color.brand.500}" },
-    "primary-hover": { "$type": "color", "$value": "{color.brand.600}" }
+    "primary-hover": { "$type": "color", "$value": "{color.brand.600}" },
+    "secondary": { "$type": "color", "$value": "{color.white}" },
+    "secondary-hover": { "$type": "color", "$value": "{color.tint.brand}" },
+    "theme": { "$type": "color", "$value": "{color.brand.800}" }
   },
   "feedback": {
     "success": { "$type": "color", "$value": "{color.success.500}" },

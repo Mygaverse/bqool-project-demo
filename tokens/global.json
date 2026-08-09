@@ -1,9 +1,12 @@
 {
   "color": {
     "brand": {
-      "50": { "$type": "color", "$value": "#f1f7ff" },
       "500": { "$type": "color", "$value": "#4aaada" },
-      "600": { "$type": "color", "$value": "#3a9aca" }
+      "600": { "$type": "color", "$value": "#3a9aca" },
+      "800": { "$type": "color", "$value": "#0066b7" }
+    },
+    "tint": {
+      "brand": { "$type": "color", "$value": "#f1f7ff" }
     },
     "grey": {
       "50": { "$type": "color", "$value": "#f7f9fb" },
@@ -25,9 +28,9 @@
     "overlay": {
       "shadow-10": { "$type": "color", "$value": "rgba(33, 37, 41, 0.1)" },
       "shadow-15": { "$type": "color", "$value": "rgba(33, 37, 41, 0.15)" },
-      "success-20": { "$type": "color", "$value": "rgba(118, 181, 72, 0.2)" },
-      "warning-20": { "$type": "color", "$value": "rgba(255, 193, 7, 0.2)" },
-      "danger-20": { "$type": "color", "$value": "rgba(253, 98, 94, 0.2)" }
+      "success-15": { "$type": "color", "$value": "rgba(118, 181, 72, 0.15)" },
+      "warning-15": { "$type": "color", "$value": "rgba(255, 193, 7, 0.15)" },
+      "danger-15": { "$type": "color", "$value": "rgba(253, 98, 94, 0.15)" }
     }
   },
   "space": {
@@ -48,15 +51,18 @@
     "sans": { "$type": "fontFamilies", "$value": "Nokora" }
   },
   "fontSize": {
+    "xxs": { "$type": "fontSizes", "$value": "10" },
     "xs": { "$type": "fontSizes", "$value": "12" },
     "sm": { "$type": "fontSizes", "$value": "14" },
     "base": { "$type": "fontSizes", "$value": "16" },
     "lg": { "$type": "fontSizes", "$value": "18" },
     "xl": { "$type": "fontSizes", "$value": "20" },
     "2xl": { "$type": "fontSizes", "$value": "24" },
-    "3xl": { "$type": "fontSizes", "$value": "30" }
+    "3xl": { "$type": "fontSizes", "$value": "30" },
+    "4xl": { "$type": "fontSizes", "$value": "36" }
   },
   "fontWeight": {
+    "light": { "$type": "fontWeights", "$value": "300" },
     "regular": { "$type": "fontWeights", "$value": "400" },
     "medium": { "$type": "fontWeights", "$value": "500" },
     "semibold": { "$type": "fontWeights", "$value": "600" },

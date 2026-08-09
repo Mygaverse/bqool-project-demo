@@ -46,11 +46,11 @@
   },
   "trendPill": {
     "positive": {
-      "bg": { "$type": "color", "$value": "{color.overlay.success-20}" },
+      "bg": { "$type": "color", "$value": "{color.overlay.success-15}" },
       "fg": { "$type": "color", "$value": "{feedback.success}" }
     },
     "negative": {
-      "bg": { "$type": "color", "$value": "{color.overlay.danger-20}" },
+      "bg": { "$type": "color", "$value": "{color.overlay.danger-15}" },
       "fg": { "$type": "color", "$value": "{feedback.danger}" }
     }
   },

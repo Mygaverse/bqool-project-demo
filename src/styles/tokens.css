@@ -3,9 +3,10 @@
  */
 
 :root {
-  --color-brand-50: #f1f7ff;
   --color-brand-500: #4aaada;
   --color-brand-600: #3a9aca;
+  --color-brand-800: #0066b7;
+  --color-tint-brand: #f1f7ff;
   --color-grey-50: #f7f9fb;
   --color-grey-200: #e2e2e2;
   --color-grey-400: #b2b2b2;
@@ -17,9 +18,9 @@
   --color-white: #ffffff;
   --color-overlay-shadow-10: rgba(33, 37, 41, 0.1);
   --color-overlay-shadow-15: rgba(33, 37, 41, 0.15);
-  --color-overlay-success-20: rgba(118, 181, 72, 0.2);
-  --color-overlay-warning-20: rgba(255, 193, 7, 0.2);
-  --color-overlay-danger-20: rgba(253, 98, 94, 0.2);
+  --color-overlay-success-15: rgba(118, 181, 72, 0.15);
+  --color-overlay-warning-15: rgba(255, 193, 7, 0.15);
+  --color-overlay-danger-15: rgba(253, 98, 94, 0.15);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -31,6 +32,7 @@
   --radius-lg: 10px;
   --radius-full: 999px;
   --font-family-sans: Nokora;
+  --font-size-xxs: 10px;
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-base: 16px;
@@ -38,6 +40,8 @@
   --font-size-xl: 20px;
   --font-size-2xl: 24px;
   --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -47,12 +51,16 @@
   --text-primary: var(--color-grey-900);
   --text-secondary: var(--color-grey-500);
   --text-inverse: var(--color-white);
+  --text-brand: var(--color-brand-500);
   --surface-default: var(--color-white);
-  --surface-muted: var(--color-grey-50);
+  --surface-muted: var(--color-grey-400);
   --surface-border: var(--color-grey-200);
-  --surface-selected: var(--color-brand-50);
+  --surface-selected: var(--color-tint-brand);
   --action-primary: var(--color-brand-500);
   --action-primary-hover: var(--color-brand-600);
+  --action-secondary: var(--color-white);
+  --action-secondary-hover: var(--color-tint-brand);
+  --action-theme: var(--color-brand-800);
   --feedback-success: var(--color-success-500);
   --feedback-warning: var(--color-warning-500);
   --feedback-danger: var(--color-danger-500);
@@ -63,8 +71,8 @@
   --button-primary-radius: var(--radius-md);
   --toggle-knob: var(--color-white);
   --card-radius: var(--radius-lg);
-  --trend-pill-positive-bg: var(--color-overlay-success-20);
-  --trend-pill-negative-bg: var(--color-overlay-danger-20);
+  --trend-pill-positive-bg: var(--color-overlay-success-15);
+  --trend-pill-negative-bg: var(--color-overlay-danger-15);
   --elevation-resting: var(--shadow-sm);
   --elevation-raised: var(--shadow-md);
   --button-primary-bg: var(--action-primary);
