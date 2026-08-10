@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TrendPill } from './TrendPill';
 
 const meta: Meta<typeof TrendPill> = {
-  title: 'Design System/TrendPill',
+  title: 'Design System/Components/TrendPill',
   component: TrendPill,
 };
 export default meta;

@@ -3,7 +3,7 @@ import { Card } from './Card';
 import { Button } from './Button';
 
 const meta: Meta<typeof Card> = {
-  title: 'Design System/Card',
+  title: 'Design System/Components/Card',
   component: Card,
 };
 export default meta;

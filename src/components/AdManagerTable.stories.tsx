@@ -1,14 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { Toggle } from './Toggle';
 import { Badge } from './Badge';
 import { DeliveryStatus } from './DeliveryStatus';
-import { StatusPill } from './StatusPill';
-import { BudgetInput } from './BudgetInput';
 import { Button } from './Button';
+import { EntityCell } from './EntityCell';
+import { StatusCell } from './StatusCell';
+import { BudgetCell } from './BudgetCell';
+import { AIStatusCell } from './AIStatusCell';
 
 const meta: Meta = {
-  title: 'Design System/Pages/Ad Manager Table',
+  title: 'Design System/Screens/Ad Manager Table',
 };
 export default meta;
 
@@ -66,15 +67,19 @@ const INITIAL_ROWS: Row[] = [
   },
 ];
 
-// Real column structure grounded in sp-campaigns-columns.tsx + StatusCell.tsx
-// + BudgetCell.tsx, laid out per the user's own table mockup: plain Toggle
-// for row Status (not StatusPill — that belongs to AI-Bidding/AI-Harvesting),
-// icon-only gear Action button, and an editable budget stepper with an
-// invalid-bid error state.
+const toggleAI = (status: 'enabled' | 'paused'): 'enabled' | 'paused' => (status === 'enabled' ? 'paused' : 'enabled');
+
+// A Screen: composed entirely from Patterns (EntityCell, StatusCell,
+// BudgetCell, AIStatusCell) plus a few bare Components, grounded in
+// sp-campaigns-columns.tsx / StatusCell.tsx / BudgetCell.tsx and the
+// user's own table mockup.
 function AdManagerTableDemo() {
   const [rows, setRows] = useState(INITIAL_ROWS);
 
   const total = rows.reduce((sum, row) => sum + (row.budget ?? 0), 0);
+
+  const updateRow = (id: string, patch: Partial<Row>) =>
+    setRows((r) => r.map((x) => (x.id === id ? { ...x, ...patch } : x)));
 
   return (
     <div className="font-sans bg-surface-default border border-surface-border rounded-token-lg shadow-resting overflow-x-auto">
@@ -111,45 +116,41 @@ function AdManagerTableDemo() {
                   <GearIcon />
                 </Button>
               </td>
-              <td className="px-token-4 py-token-3 text-center">
-                <Toggle
-                  checked={row.enabled}
-                  onChange={(checked) => setRows((r) => r.map((x) => (x.id === row.id ? { ...x, enabled: checked } : x)))}
+              <td className="px-token-4 py-token-3">
+                <StatusCell enabled={row.enabled} onToggle={(enabled) => updateRow(row.id, { enabled })} />
+              </td>
+              <td className="px-token-4 py-token-3">
+                <EntityCell
+                  title={row.name}
+                  badges={[
+                    <Badge key="store" tone="neutral">{row.store}</Badge>,
+                    <Badge key="type" tone="neutral" emphasis="solid">{row.adType}</Badge>,
+                  ]}
                 />
               </td>
               <td className="px-token-4 py-token-3">
-                <div className="flex flex-col gap-1.5">
-                  <span className="text-action-theme font-medium hover:underline cursor-pointer">{row.name}</span>
-                  <div className="flex items-center gap-1.5">
-                    <Badge tone="neutral">{row.store}</Badge>
-                    <Badge tone="neutral" emphasis="solid">{row.adType}</Badge>
-                  </div>
-                </div>
+                <EntityCell title={row.goal} badges={[<Badge key="tier" tone="neutral">{row.goalTier}</Badge>]} />
               </td>
               <td className="px-token-4 py-token-3">
-                <div className="flex flex-col gap-1.5">
-                  <span className="text-action-theme font-medium hover:underline cursor-pointer">{row.goal}</span>
-                  <Badge tone="neutral">{row.goalTier}</Badge>
-                </div>
-              </td>
-              <td className="px-token-4 py-token-3">
-                <BudgetInput
+                <BudgetCell
                   value={row.budget}
                   invalid={row.budget === null}
-                  onChange={(value) => setRows((r) => r.map((x) => (x.id === row.id ? { ...x, budget: value } : x)))}
+                  onChange={(budget) => updateRow(row.id, { budget })}
                 />
               </td>
               <td className="px-token-4 py-token-3">
-                <div className="flex flex-col gap-1">
-                  <StatusPill status={row.aiBidding} />
-                  <span className="text-action-primary text-xs hover:underline cursor-pointer">{row.biddingGroups}</span>
-                </div>
+                <AIStatusCell
+                  status={row.aiBidding}
+                  caption={row.biddingGroups}
+                  onToggle={() => updateRow(row.id, { aiBidding: toggleAI(row.aiBidding) })}
+                />
               </td>
               <td className="px-token-4 py-token-3">
-                <div className="flex flex-col gap-1">
-                  <StatusPill status={row.aiHarvesting} />
-                  <span className="text-action-primary text-xs hover:underline cursor-pointer">{row.harvestingGroups}</span>
-                </div>
+                <AIStatusCell
+                  status={row.aiHarvesting}
+                  caption={row.harvestingGroups}
+                  onToggle={() => updateRow(row.id, { aiHarvesting: toggleAI(row.aiHarvesting) })}
+                />
               </td>
               <td className="px-token-4 py-token-3">
                 <DeliveryStatus status={row.delivery} />

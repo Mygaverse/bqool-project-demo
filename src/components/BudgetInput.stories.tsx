@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BudgetInput } from './BudgetInput';
 
 const meta: Meta<typeof BudgetInput> = {
-  title: 'Design System/BudgetInput',
+  title: 'Design System/Components/BudgetInput',
   component: BudgetInput,
 };
 export default meta;

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { StatusPill } from './StatusPill';
 
 const meta: Meta<typeof StatusPill> = {
-  title: 'Design System/StatusPill',
+  title: 'Design System/Components/StatusPill',
   component: StatusPill,
 };
 export default meta;
