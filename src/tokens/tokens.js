@@ -55,6 +55,7 @@ export const textInverse = "#ffffff";
 export const textBrand = "#4aaada";
 export const textDisabled = "rgba(33, 37, 41, 0.4)";
 export const surfaceDefault = "#ffffff";
+export const surfaceSubtle = "#f7f9fb";
 export const surfaceMuted = "#b2b2b2";
 export const surfaceBorder = "#e2e2e2";
 export const surfaceSelected = "#f1f7ff";

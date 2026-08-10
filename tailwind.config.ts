@@ -29,6 +29,7 @@ const config: Config = {
         },
         surface: {
           default: 'var(--surface-default)',
+          subtle: 'var(--surface-subtle)',
           muted: 'var(--surface-muted)',
           border: 'var(--surface-border)',
           selected: 'var(--surface-selected)',

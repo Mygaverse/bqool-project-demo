@@ -8,6 +8,7 @@
   },
   "surface": {
     "default": { "$type": "color", "$value": "{color.white}" },
+    "subtle": { "$type": "color", "$value": "{color.grey.50}" },
     "muted": { "$type": "color", "$value": "{color.grey.400}" },
     "border": { "$type": "color", "$value": "{color.grey.200}" },
     "selected": { "$type": "color", "$value": "{color.tint.brand}" },
