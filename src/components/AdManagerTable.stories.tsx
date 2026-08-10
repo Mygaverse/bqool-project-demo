@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { StatusPill } from './StatusPill';
+import { useState } from 'react';
+import { Toggle } from './Toggle';
 import { Badge } from './Badge';
 import { DeliveryStatus } from './DeliveryStatus';
-import { TrendPill } from './TrendPill';
+import { StatusPill } from './StatusPill';
+import { BudgetInput } from './BudgetInput';
 import { Button } from './Button';
 
 const meta: Meta = {
@@ -12,70 +14,155 @@ export default meta;
 
 type Story = StoryObj;
 
+const GearIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+    <path d="M9.05 1a1 1 0 0 1 .967.744L10.291 3.3a5.99 5.99 0 0 1 1.235.712l1.487-.545a1 1 0 0 1 1.216.44l.949 1.644a1 1 0 0 1-.23 1.298l-1.166 1.005a6.05 6.05 0 0 1 0 1.427l1.166 1.005a1 1 0 0 1 .23 1.298l-.949 1.644a1 1 0 0 1-1.216.44l-1.487-.545a5.99 5.99 0 0 1-1.235.712l-.274 1.556a1 1 0 0 1-.967.744H6.95a1 1 0 0 1-.967-.744L5.709 12.7a5.99 5.99 0 0 1-1.235-.712l-1.487.545a1 1 0 0 1-1.216-.44L.822 10.45a1 1 0 0 1 .23-1.298l1.166-1.005a6.05 6.05 0 0 1 0-1.427L1.052 5.715a1 1 0 0 1-.23-1.298l.949-1.644a1 1 0 0 1 1.216-.44l1.487.545A5.99 5.99 0 0 1 5.709 2.3L5.983 1.744A1 1 0 0 1 6.95 1h2.1ZM8 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+  </svg>
+);
+
+const SortIcon = () => <span className="text-text-secondary text-[10px] align-middle">↕</span>;
+
 interface Row {
-  status: 'enabled' | 'paused' | 'pending';
+  id: string;
+  enabled: boolean;
   name: string;
+  store: string;
   adType: string;
+  goal: string;
+  goalTier: string;
+  budget: number | null;
+  aiBidding: 'enabled' | 'paused';
+  biddingGroups: string;
+  aiHarvesting: 'enabled' | 'paused';
+  harvestingGroups: string;
   delivery: 'delivering' | 'pending' | 'not-delivering';
-  budget: number;
-  trend: number;
+  portfolio: string;
 }
 
-const ROWS: Row[] = [
-  { status: 'enabled', name: 'Wireless Earbuds — Auto Targeting', adType: 'SP', delivery: 'delivering', budget: 42.5, trend: 6.4 },
-  { status: 'paused', name: 'Yoga Mat — Prospecting', adType: 'SB', delivery: 'not-delivering', budget: 18.0, trend: -3.1 },
-  { status: 'pending', name: 'Desk Lamp — Retargeting', adType: 'SD', delivery: 'pending', budget: 25.75, trend: 1.2 },
-  { status: 'enabled', name: 'Travel Mug — Brand Defense', adType: 'SP', delivery: 'delivering', budget: 60.0, trend: 12.8 },
+const INITIAL_ROWS: Row[] = [
+  {
+    id: '1', enabled: false, name: 'SP | Wireless Earbuds | Auto', store: '🇺🇸 Home Store', adType: 'SP',
+    goal: 'Growth Plan', goalTier: 'Basic', budget: null,
+    aiBidding: 'paused', biddingGroups: '0/1 Ad Groups', aiHarvesting: 'paused', harvestingGroups: '0/1 Ad Groups',
+    delivery: 'not-delivering', portfolio: '-',
+  },
+  {
+    id: '2', enabled: true, name: 'SP | Yoga Mat | Manual Exact', store: '🇺🇸 Home Store', adType: 'SP',
+    goal: 'Launch Strategy', goalTier: 'Basic', budget: 100,
+    aiBidding: 'enabled', biddingGroups: '2/2 Ad Groups', aiHarvesting: 'enabled', harvestingGroups: '2/2 Ad Groups',
+    delivery: 'delivering', portfolio: 'Q1 Strategy',
+  },
+  {
+    id: '3', enabled: true, name: 'SP | Desk Lamp | Manual Phrase', store: '🇨🇦 North Store', adType: 'SP',
+    goal: 'Defensive', goalTier: 'Basic', budget: 100,
+    aiBidding: 'paused', biddingGroups: '0/1 Ad Groups', aiHarvesting: 'paused', harvestingGroups: '0/1 Ad Groups',
+    delivery: 'not-delivering', portfolio: 'Defensive',
+  },
+  {
+    id: '4', enabled: false, name: 'SP | Travel Mug | Brand Defense', store: '🇺🇸 Home Store', adType: 'SP',
+    goal: 'Brand Protect', goalTier: 'Brand-Based', budget: 85,
+    aiBidding: 'enabled', biddingGroups: '1/1 Ad Groups', aiHarvesting: 'enabled', harvestingGroups: '1/1 Ad Groups',
+    delivery: 'delivering', portfolio: 'Core Products',
+  },
 ];
 
-// Composed from real Ad Manager table structure (status column, entity-cell
-// name+badge, budget cell) plus the case-study redesign components
-// (StatusPill, DeliveryStatus, TrendPill) layered on top.
-export const AdManagerTable: Story = {
-  render: () => (
-    <div className="font-sans bg-surface-default border border-surface-border rounded-token-lg shadow-resting overflow-hidden">
-      <table className="w-full text-sm">
+// Real column structure grounded in sp-campaigns-columns.tsx + StatusCell.tsx
+// + BudgetCell.tsx, laid out per the user's own table mockup: plain Toggle
+// for row Status (not StatusPill — that belongs to AI-Bidding/AI-Harvesting),
+// icon-only gear Action button, and an editable budget stepper with an
+// invalid-bid error state.
+function AdManagerTableDemo() {
+  const [rows, setRows] = useState(INITIAL_ROWS);
+
+  const total = rows.reduce((sum, row) => sum + (row.budget ?? 0), 0);
+
+  return (
+    <div className="font-sans bg-surface-default border border-surface-border rounded-token-lg shadow-resting overflow-x-auto">
+      <table className="text-sm">
         <thead className="bg-surface-selected">
           <tr className="text-xs font-semibold text-text-secondary uppercase tracking-wide">
-            <th className="px-token-4 py-token-3 text-left">Status</th>
-            <th className="px-token-4 py-token-3 text-left">Campaign</th>
-            <th className="px-token-4 py-token-3 text-left">Delivery</th>
-            <th className="px-token-4 py-token-3 text-left">Daily Budget</th>
-            <th className="px-token-4 py-token-3 text-left">ACOS Trend</th>
-            <th className="px-token-4 py-token-3 text-right">Actions</th>
+            <th className="px-token-4 py-token-3 text-center">
+              <input type="checkbox" style={{ accentColor: 'var(--action-primary)' }} />
+            </th>
+            <th className="px-token-4 py-token-3 text-center">Actions</th>
+            <th className="px-token-4 py-token-3 text-center">Status</th>
+            <th className="px-token-4 py-token-3 text-left">Campaigns <SortIcon /></th>
+            <th className="px-token-4 py-token-3 text-left">Goals <SortIcon /></th>
+            <th className="px-token-4 py-token-3 text-left">Daily Budget <SortIcon /></th>
+            <th className="px-token-4 py-token-3 text-left">AI-Bidding</th>
+            <th className="px-token-4 py-token-3 text-left">AI-Harvesting</th>
+            <th className="px-token-4 py-token-3 text-left">Delivery Status</th>
+            <th className="px-token-4 py-token-3 text-left">Portfolio</th>
           </tr>
         </thead>
         <tbody>
-          {ROWS.map((row) => (
-            <tr key={row.name} className="border-t border-surface-border">
-              <td className="px-token-4 py-token-3">
-                <StatusPill status={row.status} />
+          <tr className="bg-surface-selected border-t border-surface-border font-semibold text-text-primary">
+            <td colSpan={5} className="px-token-4 py-token-2">Total</td>
+            <td className="px-token-4 py-token-2">${total.toFixed(2)}</td>
+            <td colSpan={4} />
+          </tr>
+          {rows.map((row) => (
+            <tr key={row.id} className="border-t border-surface-border align-top">
+              <td className="px-token-4 py-token-3 text-center">
+                <input type="checkbox" style={{ accentColor: 'var(--action-primary)' }} />
+              </td>
+              <td className="px-token-4 py-token-3 text-center">
+                <Button variant="icon" aria-label="Manage campaign">
+                  <GearIcon />
+                </Button>
+              </td>
+              <td className="px-token-4 py-token-3 text-center">
+                <Toggle
+                  checked={row.enabled}
+                  onChange={(checked) => setRows((r) => r.map((x) => (x.id === row.id ? { ...x, enabled: checked } : x)))}
+                />
               </td>
               <td className="px-token-4 py-token-3">
                 <div className="flex flex-col gap-1.5">
                   <span className="text-action-theme font-medium hover:underline cursor-pointer">{row.name}</span>
-                  <Badge tone="neutral">{row.adType}</Badge>
+                  <div className="flex items-center gap-1.5">
+                    <Badge tone="neutral">{row.store}</Badge>
+                    <Badge tone="neutral" emphasis="solid">{row.adType}</Badge>
+                  </div>
+                </div>
+              </td>
+              <td className="px-token-4 py-token-3">
+                <div className="flex flex-col gap-1.5">
+                  <span className="text-action-theme font-medium hover:underline cursor-pointer">{row.goal}</span>
+                  <Badge tone="neutral">{row.goalTier}</Badge>
+                </div>
+              </td>
+              <td className="px-token-4 py-token-3">
+                <BudgetInput
+                  value={row.budget}
+                  invalid={row.budget === null}
+                  onChange={(value) => setRows((r) => r.map((x) => (x.id === row.id ? { ...x, budget: value } : x)))}
+                />
+              </td>
+              <td className="px-token-4 py-token-3">
+                <div className="flex flex-col gap-1">
+                  <StatusPill status={row.aiBidding} />
+                  <span className="text-action-primary text-xs hover:underline cursor-pointer">{row.biddingGroups}</span>
+                </div>
+              </td>
+              <td className="px-token-4 py-token-3">
+                <div className="flex flex-col gap-1">
+                  <StatusPill status={row.aiHarvesting} />
+                  <span className="text-action-primary text-xs hover:underline cursor-pointer">{row.harvestingGroups}</span>
                 </div>
               </td>
               <td className="px-token-4 py-token-3">
                 <DeliveryStatus status={row.delivery} />
               </td>
-              <td className="px-token-4 py-token-3">
-                <div className="flex items-center gap-token-2">
-                  <span className="text-text-primary font-medium">${row.budget.toFixed(2)}</span>
-                  <Badge tone="neutral">Auto</Badge>
-                </div>
-              </td>
-              <td className="px-token-4 py-token-3">
-                <TrendPill value={row.trend} />
-              </td>
-              <td className="px-token-4 py-token-3 text-right">
-                <Button variant="secondary">Manage</Button>
-              </td>
+              <td className="px-token-4 py-token-3 text-text-primary">{row.portfolio}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-  ),
+  );
+}
+
+export const AdManagerTable: Story = {
+  render: () => <AdManagerTableDemo />,
 };
