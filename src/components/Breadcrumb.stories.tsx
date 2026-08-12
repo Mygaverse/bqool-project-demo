@@ -9,4 +9,5 @@ export default meta;
 
 type Story = StoryObj<typeof Breadcrumb>;
 
-export const Default: Story = { args: { section: 'Advertising', page: 'Dashboard' } };
+export const TwoLevel: Story = { args: { items: ['Advertising', 'Dashboard'] } };
+export const FourLevel: Story = { args: { items: ['Advertising', 'Ad Manager', 'Sponsored Products', 'Campaigns'] } };

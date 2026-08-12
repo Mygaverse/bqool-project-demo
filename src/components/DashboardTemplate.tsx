@@ -13,7 +13,7 @@ export function DashboardTemplate() {
 
   return (
     <div className="font-sans flex flex-col gap-token-6 p-token-6 bg-surface-subtle">
-      <Breadcrumb section="Advertising" page="Dashboard" />
+      <Breadcrumb items={['Advertising', 'Dashboard']} />
       <FilterBar>
         <Select variant="grouped" label="Store" value={store} options={['All Stores', 'Home Store', 'North Store']} onChange={setStore} />
         <Select
