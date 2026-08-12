@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Tabs } from './Tabs';
 
 const meta: Meta<typeof Tabs> = {
-  title: 'Design System/Components/Tabs',
+  title: 'Design System/Patterns/Tabs',
   component: Tabs,
 };
 export default meta;

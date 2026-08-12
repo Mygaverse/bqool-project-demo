@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { Tab } from './Tab';
 
 export interface TabsProps {
   tabs: string[];
@@ -6,25 +6,13 @@ export interface TabsProps {
   onChange: (tab: string) => void;
 }
 
+/** A row of Tab instances sharing one baseline border — the Ad Manager sub-nav. */
 export function Tabs({ tabs, active, onChange }: TabsProps) {
   return (
     <div className="flex items-center gap-token-6 border-b border-surface-border font-sans">
-      {tabs.map((tab) => {
-        const isActive = tab === active;
-        return (
-          <button
-            key={tab}
-            type="button"
-            onClick={() => onChange(tab)}
-            className={clsx(
-              'pb-token-2 text-sm border-b-2 -mb-px transition-colors',
-              isActive ? 'border-action-primary text-text-primary font-semibold' : 'border-transparent text-text-secondary hover:text-text-primary',
-            )}
-          >
-            {tab}
-          </button>
-        );
-      })}
+      {tabs.map((tab) => (
+        <Tab key={tab} label={tab} active={tab === active} onClick={() => onChange(tab)} />
+      ))}
     </div>
   );
 }
