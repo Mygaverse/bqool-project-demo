@@ -6,14 +6,14 @@ import { EntityCell } from './EntityCell';
 import { StatusCell } from './StatusCell';
 import { BudgetCell } from './BudgetCell';
 import { AIStatusCell } from './AIStatusCell';
+import { HeaderCell } from './HeaderCell';
+import { SummaryCell } from './SummaryCell';
 
 const GearIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
     <path d="M9.05 1a1 1 0 0 1 .967.744L10.291 3.3a5.99 5.99 0 0 1 1.235.712l1.487-.545a1 1 0 0 1 1.216.44l.949 1.644a1 1 0 0 1-.23 1.298l-1.166 1.005a6.05 6.05 0 0 1 0 1.427l1.166 1.005a1 1 0 0 1 .23 1.298l-.949 1.644a1 1 0 0 1-1.216.44l-1.487-.545a5.99 5.99 0 0 1-1.235.712l-.274 1.556a1 1 0 0 1-.967.744H6.95a1 1 0 0 1-.967-.744L5.709 12.7a5.99 5.99 0 0 1-1.235-.712l-1.487.545a1 1 0 0 1-1.216-.44L.822 10.45a1 1 0 0 1 .23-1.298l1.166-1.005a6.05 6.05 0 0 1 0-1.427L1.052 5.715a1 1 0 0 1-.23-1.298l.949-1.644a1 1 0 0 1 1.216-.44l1.487.545A5.99 5.99 0 0 1 5.709 2.3L5.983 1.744A1 1 0 0 1 6.95 1h2.1ZM8 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
   </svg>
 );
-
-const SortIcon = () => <span className="text-text-secondary text-[10px] align-middle">↕</span>;
 
 export interface AdManagerRow {
   id: string;
@@ -77,25 +77,23 @@ export function AdManagerTableScreen() {
     <div className="font-sans bg-surface-default border border-surface-border rounded-token-lg shadow-resting overflow-x-auto">
       <table className="text-sm">
         <thead className="bg-surface-selected">
-          <tr className="text-xs font-semibold text-text-secondary uppercase tracking-wide">
-            <th className="px-token-4 py-token-3 text-center">
-              <input type="checkbox" style={{ accentColor: 'var(--action-primary)' }} />
-            </th>
-            <th className="px-token-4 py-token-3 text-center">Actions</th>
-            <th className="px-token-4 py-token-3 text-center">Status</th>
-            <th className="px-token-4 py-token-3 text-left">Campaigns <SortIcon /></th>
-            <th className="px-token-4 py-token-3 text-left">Goals <SortIcon /></th>
-            <th className="px-token-4 py-token-3 text-left">Daily Budget <SortIcon /></th>
-            <th className="px-token-4 py-token-3 text-left">AI-Bidding</th>
-            <th className="px-token-4 py-token-3 text-left">AI-Harvesting</th>
-            <th className="px-token-4 py-token-3 text-left">Delivery Status</th>
-            <th className="px-token-4 py-token-3 text-left">Portfolio</th>
+          <tr>
+            <th className="px-token-4 py-token-3"><HeaderCell checkbox /></th>
+            <th className="px-token-4 py-token-3"><HeaderCell label="Actions" align="center" /></th>
+            <th className="px-token-4 py-token-3"><HeaderCell label="Status" align="center" /></th>
+            <th className="px-token-4 py-token-3"><HeaderCell label="Campaigns" icon="sort" /></th>
+            <th className="px-token-4 py-token-3"><HeaderCell label="Goals" icon="sort" /></th>
+            <th className="px-token-4 py-token-3"><HeaderCell label="Daily Budget" icon="edu" /></th>
+            <th className="px-token-4 py-token-3"><HeaderCell label="AI-Bidding" icon="info" /></th>
+            <th className="px-token-4 py-token-3"><HeaderCell label="AI-Harvesting" icon="info" /></th>
+            <th className="px-token-4 py-token-3"><HeaderCell label="Delivery Status" icon="sort" /></th>
+            <th className="px-token-4 py-token-3"><HeaderCell label="Portfolio" /></th>
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-surface-selected border-t border-surface-border font-semibold text-text-primary">
-            <td colSpan={5} className="px-token-4 py-token-2">Total</td>
-            <td className="px-token-4 py-token-2">${total.toFixed(2)}</td>
+          <tr className="bg-surface-selected border-t border-surface-border">
+            <td colSpan={5} className="px-token-4 py-token-2"><SummaryCell>Total</SummaryCell></td>
+            <td className="px-token-4 py-token-2"><SummaryCell>${total.toFixed(2)}</SummaryCell></td>
             <td colSpan={4} />
           </tr>
           {rows.map((row) => (
