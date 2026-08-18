@@ -14,3 +14,5 @@ export const Sortable: Story = { args: { label: 'Campaigns', icon: 'sort' } };
 export const WithInfo: Story = { args: { label: 'AI-Bidding', icon: 'info' } };
 export const WithEdu: Story = { args: { label: 'Daily Budget', icon: 'edu' } };
 export const Checkbox: Story = { args: { checkbox: true } };
+export const SummaryLabel: Story = { args: { label: 'Total', variant: 'summary' } };
+export const SummaryValue: Story = { args: { label: '$1,702.84', variant: 'summary' } };

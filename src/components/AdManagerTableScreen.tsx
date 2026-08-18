@@ -7,7 +7,6 @@ import { StatusCell } from './StatusCell';
 import { BudgetCell } from './BudgetCell';
 import { AIStatusCell } from './AIStatusCell';
 import { HeaderCell } from './HeaderCell';
-import { SummaryCell } from './SummaryCell';
 
 const GearIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -91,9 +90,9 @@ export function AdManagerTableScreen() {
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-surface-selected border-t border-surface-border">
-            <td colSpan={5} className="px-token-4 py-token-2"><SummaryCell>Total</SummaryCell></td>
-            <td className="px-token-4 py-token-2"><SummaryCell>${total.toFixed(2)}</SummaryCell></td>
+          <tr className="bg-surface-subtle border-t border-surface-border">
+            <td colSpan={5} className="px-token-4 py-token-2"><HeaderCell label="Total" variant="summary" /></td>
+            <td className="px-token-4 py-token-2"><HeaderCell label={`$${total.toFixed(2)}`} variant="summary" /></td>
             <td colSpan={4} />
           </tr>
           {rows.map((row) => (

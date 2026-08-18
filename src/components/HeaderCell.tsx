@@ -5,6 +5,8 @@ export interface HeaderCellProps {
   icon?: 'sort' | 'info' | 'edu';
   checkbox?: boolean;
   align?: 'left' | 'center';
+  /** header = column-label style (uppercase, secondary); summary = the Total row's bold value style. */
+  variant?: 'header' | 'summary';
 }
 
 const SortIcon = () => <span className="text-[10px] align-middle">↕</span>;
@@ -25,8 +27,8 @@ const EduIcon = () => (
 
 const ICONS = { sort: SortIcon, info: InfoIcon, edu: EduIcon };
 
-/** Shared column-header shell (bg, text style) with a slot for the trailing icon, or a checkbox in place of a label. */
-export function HeaderCell({ label, icon, checkbox = false, align = 'left' }: HeaderCellProps) {
+/** Shared cell shell (text + optional icon, or a checkbox) for both column headers and the Total row. */
+export function HeaderCell({ label, icon, checkbox = false, align = 'left', variant = 'header' }: HeaderCellProps) {
   if (checkbox) {
     return (
       <div className="flex justify-center">
@@ -40,7 +42,9 @@ export function HeaderCell({ label, icon, checkbox = false, align = 'left' }: He
   return (
     <div
       className={clsx(
-        'flex items-center gap-token-1 text-xs font-semibold text-text-secondary uppercase tracking-wide',
+        'flex items-center gap-token-1',
+        variant === 'header' && 'text-xs font-semibold text-text-secondary uppercase tracking-wide',
+        variant === 'summary' && 'text-sm font-semibold text-text-primary',
         align === 'center' && 'justify-center',
       )}
     >
