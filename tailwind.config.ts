@@ -30,6 +30,7 @@ const config: Config = {
         surface: {
           default: 'var(--surface-default)',
           subtle: 'var(--surface-subtle)',
+          secondary: 'var(--surface-secondary)',
           muted: 'var(--surface-muted)',
           border: 'var(--surface-border)',
           selected: 'var(--surface-selected)',
@@ -44,9 +45,9 @@ const config: Config = {
           success: 'var(--feedback-success)',
           warning: 'var(--feedback-warning)',
           danger: 'var(--feedback-danger)',
-          'success-tint': 'var(--color-overlay-success-15)',
-          'warning-tint': 'var(--color-overlay-warning-15)',
-          'danger-tint': 'var(--color-overlay-danger-15)',
+          'success-tint': 'var(--color-overlay-success-20)',
+          'warning-tint': 'var(--color-overlay-warning-20)',
+          'danger-tint': 'var(--color-overlay-danger-20)',
         },
         toggle: {
           'track-on': 'var(--toggle-track-on)',
@@ -70,7 +71,9 @@ const config: Config = {
         'token-2': 'var(--space-2)',
         'token-3': 'var(--space-3)',
         'token-4': 'var(--space-4)',
+        'token-5': 'var(--space-5)',
         'token-6': 'var(--space-6)',
+        'token-7': 'var(--space-7)',
         'token-8': 'var(--space-8)',
       },
       borderRadius: {

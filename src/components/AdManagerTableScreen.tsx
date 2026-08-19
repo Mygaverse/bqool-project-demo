@@ -90,7 +90,7 @@ export function AdManagerTableScreen() {
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-surface-subtle border-t border-surface-border">
+          <tr className="bg-surface-secondary border-t border-surface-border">
             <td colSpan={5} className="px-token-4 py-token-2"><HeaderCell label="Total" variant="summary" /></td>
             <td className="px-token-4 py-token-2"><HeaderCell label={`$${total.toFixed(2)}`} variant="summary" /></td>
             <td colSpan={4} />

@@ -10,6 +10,7 @@
     },
     "grey": {
       "50": { "$type": "color", "$value": "#f7f9fb" },
+      "100": { "$type": "color", "$value": "#fafafa" },
       "200": { "$type": "color", "$value": "#e2e2e2" },
       "400": { "$type": "color", "$value": "#b2b2b2" },
       "500": { "$type": "color", "$value": "#5a6b7a" },
@@ -40,7 +41,9 @@
     "2": { "$type": "spacing", "$value": "8" },
     "3": { "$type": "spacing", "$value": "12" },
     "4": { "$type": "spacing", "$value": "16" },
+    "5": { "$type": "spacing", "$value": "20" },
     "6": { "$type": "spacing", "$value": "24" },
+    "7": { "$type": "spacing", "$value": "28" },
     "8": { "$type": "spacing", "$value": "32" }
   },
   "radius": {

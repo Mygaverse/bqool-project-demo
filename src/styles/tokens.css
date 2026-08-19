@@ -8,6 +8,7 @@
   --color-brand-800: #0066b7;
   --color-tint-brand: #f1f7ff;
   --color-grey-50: #f7f9fb;
+  --color-grey-100: #fafafa;
   --color-grey-200: #e2e2e2;
   --color-grey-400: #b2b2b2;
   --color-grey-500: #5a6b7a;
@@ -27,7 +28,9 @@
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
+  --space-5: 20px;
   --space-6: 24px;
+  --space-7: 28px;
   --space-8: 32px;
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -57,6 +60,7 @@
   --text-disabled: var(--color-overlay-ink-40);
   --surface-default: var(--color-white);
   --surface-subtle: var(--color-grey-50);
+  --surface-secondary: var(--color-grey-100);
   --surface-muted: var(--color-grey-400);
   --surface-border: var(--color-grey-200);
   --surface-selected: var(--color-tint-brand);
