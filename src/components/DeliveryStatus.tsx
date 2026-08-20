@@ -18,5 +18,9 @@ const CLASSES: Record<DeliveryStatusProps['status'], string> = {
 
 /** Plain colored text, no pill — the campaign table's Delivery Status column. */
 export function DeliveryStatus({ status }: DeliveryStatusProps) {
-  return <span className={clsx('text-sm font-medium', CLASSES[status])}>{LABEL[status]}</span>;
+  return (
+    <span style={{ font: 'var(--typography-body-sm)' }} className={clsx(CLASSES[status])}>
+      {LABEL[status]}
+    </span>
+  );
 }

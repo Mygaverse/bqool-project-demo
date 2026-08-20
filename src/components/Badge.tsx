@@ -7,11 +7,12 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   emphasis?: 'outline' | 'solid';
 }
 
-export function Badge({ tone = 'neutral', emphasis = 'outline', className, ...props }: BadgeProps) {
+export function Badge({ tone = 'neutral', emphasis = 'outline', className, style, ...props }: BadgeProps) {
   return (
     <span
+      style={{ font: 'var(--typography-label)', ...style }}
       className={clsx(
-        'inline-flex items-center px-token-4 py-token-1 rounded-token-full text-xs font-semibold uppercase tracking-wide',
+        'inline-flex items-center px-token-4 py-token-1 rounded-token-full uppercase tracking-wide',
         emphasis === 'outline' && [
           'border bg-surface-default',
           tone === 'neutral' && 'border-surface-border text-text-secondary',

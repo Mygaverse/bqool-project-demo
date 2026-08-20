@@ -14,8 +14,9 @@ export function TrendPill({ value }: TrendPillProps) {
   const positive = value >= 0;
   return (
     <span
+      style={{ font: 'var(--typography-label)' }}
       className={clsx(
-        'inline-flex items-center px-token-4 py-token-1 rounded-token-full text-xs font-semibold',
+        'inline-flex items-center px-token-4 py-token-1 rounded-token-full',
         positive ? 'bg-trend-pill-positive-bg text-trend-pill-positive-fg' : 'bg-trend-pill-negative-bg text-trend-pill-negative-fg',
       )}
     >

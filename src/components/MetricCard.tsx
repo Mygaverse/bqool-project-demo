@@ -12,7 +12,7 @@ export function MetricCard({ title, value, previousValue, change }: MetricCardPr
   return (
     <div className="flex flex-col bg-surface-default border border-surface-border rounded-token-lg shadow-resting overflow-hidden font-sans">
       <div className="flex items-center justify-between px-token-4 py-token-2 border-b border-surface-border bg-surface-subtle">
-        <span className="text-sm font-medium text-text-primary">{title}</span>
+        <span style={{ font: 'var(--typography-body-sm)' }} className="text-text-primary">{title}</span>
         <svg width="10" height="10" viewBox="0 0 10 10" className="text-text-secondary" fill="none">
           <path d="M2 3.5 5 6.5 8 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>

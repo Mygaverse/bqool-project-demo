@@ -41,9 +41,10 @@ export function HeaderCell({ label, icon, checkbox = false, align = 'left', vari
 
   return (
     <div
+      style={variant === 'header' ? { font: 'var(--typography-label)' } : undefined}
       className={clsx(
         'flex items-center gap-token-1',
-        variant === 'header' && 'text-xs font-semibold text-text-secondary uppercase tracking-wide',
+        variant === 'header' && 'text-text-secondary uppercase tracking-wide',
         variant === 'summary' && 'text-sm font-semibold text-text-primary',
         align === 'center' && 'justify-center',
       )}

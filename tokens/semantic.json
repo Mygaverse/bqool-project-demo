@@ -63,6 +63,24 @@
         "fontSize": "{fontSize.xs}",
         "lineHeight": "18px"
       }
+    },
+    "label": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.semibold}",
+        "fontSize": "{fontSize.xs}",
+        "lineHeight": "18px"
+      }
+    },
+    "body-sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.medium}",
+        "fontSize": "{fontSize.sm}",
+        "lineHeight": "20px"
+      }
     }
   },
   "elevation": {

@@ -29,8 +29,9 @@ export function StepNavigator({ steps, activeId, onStepClick }: StepNavigatorPro
                 className="flex items-center gap-token-2 whitespace-nowrap"
               >
                 <span
+                  style={{ font: 'var(--typography-label)' }}
                   className={clsx(
-                    'flex items-center justify-center h-7 w-7 rounded-token-full text-xs font-semibold shrink-0',
+                    'flex items-center justify-center h-7 w-7 rounded-token-full shrink-0',
                     isActive || isDone ? 'bg-text-inverse text-action-primary' : 'bg-white/20 text-text-inverse',
                   )}
                 >

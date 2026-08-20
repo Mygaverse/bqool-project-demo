@@ -23,8 +23,9 @@ export function StatusPill({ status, onToggle }: StatusPillProps) {
     <button
       type="button"
       onClick={onToggle}
+      style={{ font: 'var(--typography-label)' }}
       className={clsx(
-        'inline-flex items-center gap-token-2 px-token-4 py-token-1 rounded-token-full text-xs font-semibold transition-colors',
+        'inline-flex items-center gap-token-2 px-token-4 py-token-1 rounded-token-full transition-colors',
         status === 'enabled' && 'bg-action-primary text-text-inverse hover:bg-action-primary-hover',
         status === 'paused' && 'bg-surface-muted text-text-inverse',
         status === 'pending' && 'bg-surface-default text-action-primary border border-action-primary',

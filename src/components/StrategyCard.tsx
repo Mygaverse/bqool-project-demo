@@ -27,7 +27,7 @@ export function StrategyCard({ icon, title, description, bestFor, selected = fal
         {description}
       </p>
       <div className="flex flex-col gap-1 mt-token-2">
-        <span className="text-xs font-semibold text-text-primary">Best for</span>
+        <span style={{ font: 'var(--typography-label)' }} className="text-text-primary">Best for</span>
         <ul className="flex flex-col gap-1">
           {bestFor.map((item) => (
             <li key={item} className="flex items-start gap-token-2 text-xs text-text-secondary">

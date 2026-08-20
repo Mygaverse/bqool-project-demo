@@ -5,12 +5,13 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'icon';
 }
 
-export function Button({ variant = 'primary', className, ...props }: ButtonProps) {
+export function Button({ variant = 'primary', className, style, ...props }: ButtonProps) {
   return (
     <button
+      style={variant !== 'icon' ? { font: 'var(--typography-body-sm)', ...style } : style}
       className={clsx(
         'inline-flex items-center justify-center gap-token-2 transition-colors',
-        variant !== 'icon' && 'px-token-4 py-token-2 rounded-token-md text-sm font-medium',
+        variant !== 'icon' && 'px-token-4 py-token-2 rounded-token-md',
         variant === 'primary' && 'bg-action-primary text-text-inverse hover:bg-action-primary-hover',
         variant === 'secondary' &&
           'bg-surface-default text-text-primary border border-surface-border hover:bg-action-primary hover:text-text-inverse hover:border-action-primary',
