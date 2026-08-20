@@ -76,7 +76,7 @@
   --typography-heading-lg: var(--font-weight-bold) var(--font-size-3xl)/36px var(--font-family-sans);
   --typography-heading-md: var(--font-weight-semibold) var(--font-size-xl)/24px var(--font-family-sans);
   --typography-body: var(--font-weight-regular) var(--font-size-base)/24px var(--font-family-sans);
-  --typography-caption: var(--font-weight-medium) var(--font-size-xs)/18px var(--font-family-sans);
+  --typography-caption: var(--font-weight-regular) var(--font-size-xs)/18px var(--font-family-sans);
   --typography-label: var(--font-weight-semibold) var(--font-size-xs)/18px var(--font-family-sans);
   --typography-body-sm: var(--font-weight-medium) var(--font-size-sm)/20px var(--font-family-sans);
   --button-primary-radius: var(--radius-md);
