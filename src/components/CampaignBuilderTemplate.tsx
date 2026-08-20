@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { StepNavigator, type Step } from './StepNavigator';
 import { GoalStrategyScreen } from './GoalStrategyScreen';
 import { AdFormatPickerScreen } from './AdFormatPickerScreen';
+import { CreativeToggleRow } from './CreativeToggleRow';
 import { Button } from './Button';
 
 const STEPS: Step[] = [
@@ -18,12 +19,15 @@ const STEPS: Step[] = [
 /**
  * Page Template: sticky StepNavigator (8 steps, matching the real product's
  * order — Ad Format is its own step, not nested under Goal Strategy) over
- * two populated sections (Goal Strategy, Ad Format). A representative slice
- * of the real single-scroll wizard, not the full Products/Creatives/Preview
- * flow.
+ * three populated sections (Goal Strategy, Ad Format, Creatives). A
+ * representative slice of the real single-scroll wizard, not the full
+ * Products/Preview/Competing Campaign flow.
  */
 export function CampaignBuilderTemplate() {
   const [activeId, setActiveId] = useState('format');
+  const [logoOn, setLogoOn] = useState(true);
+  const [headlineOn, setHeadlineOn] = useState(false);
+  const [imageOn, setImageOn] = useState(true);
 
   return (
     <div className="font-sans flex flex-col gap-token-6 p-token-6 bg-surface-subtle">
@@ -48,6 +52,20 @@ export function CampaignBuilderTemplate() {
           </p>
         </div>
         <AdFormatPickerScreen />
+      </div>
+
+      <div className="bg-surface-default border border-surface-border rounded-token-lg shadow-resting p-token-6 flex flex-col gap-token-4">
+        <h2 className="text-text-primary" style={{ font: 'var(--typography-heading-md)' }}>
+          Creatives
+        </h2>
+        <div>
+          <CreativeToggleRow label="Logo" enabled={logoOn} onToggle={setLogoOn} required />
+          <CreativeToggleRow label="Headline" enabled={headlineOn} onToggle={setHeadlineOn} />
+          <CreativeToggleRow label="Image" enabled={imageOn} onToggle={setImageOn} required />
+        </div>
+        <div>
+          <Button variant="primary">Ad Preview</Button>
+        </div>
       </div>
 
       <div className="flex items-center justify-end gap-token-3 bg-surface-default border border-surface-border rounded-token-lg shadow-resting p-token-4">

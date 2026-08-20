@@ -9,7 +9,7 @@ export function Button({ variant = 'primary', className, ...props }: ButtonProps
   return (
     <button
       className={clsx(
-        'inline-flex items-center justify-center transition-colors',
+        'inline-flex items-center justify-center gap-token-2 transition-colors',
         variant !== 'icon' && 'px-token-4 py-token-2 rounded-token-md text-sm font-medium',
         variant === 'primary' && 'bg-action-primary text-text-inverse hover:bg-action-primary-hover',
         variant === 'secondary' &&
