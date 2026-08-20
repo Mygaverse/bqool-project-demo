@@ -27,7 +27,7 @@ export interface AdManagerRow {
   biddingGroups: string;
   aiHarvesting: 'enabled' | 'paused';
   harvestingGroups: string;
-  delivery: 'delivering' | 'pending' | 'not-delivering';
+  delivery: 'delivering' | 'limited' | 'not-delivering';
   portfolio: string;
 }
 
@@ -48,7 +48,7 @@ export const AD_MANAGER_ROWS: AdManagerRow[] = [
     id: '3', enabled: true, name: 'SP | Desk Lamp | Manual Phrase', store: '🇨🇦 North Store', adType: 'SP',
     goal: 'Defensive', goalTier: 'Basic', budget: 100,
     aiBidding: 'paused', biddingGroups: '0/1 Ad Groups', aiHarvesting: 'paused', harvestingGroups: '0/1 Ad Groups',
-    delivery: 'not-delivering', portfolio: 'Defensive',
+    delivery: 'limited', portfolio: 'Defensive',
   },
   {
     id: '4', enabled: false, name: 'SP | Travel Mug | Brand Defense', store: '🇺🇸 Home Store', adType: 'SP',

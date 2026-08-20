@@ -1,18 +1,18 @@
 import clsx from 'clsx';
 
 export interface DeliveryStatusProps {
-  status: 'delivering' | 'pending' | 'not-delivering';
+  status: 'delivering' | 'limited' | 'not-delivering';
 }
 
 const LABEL: Record<DeliveryStatusProps['status'], string> = {
   delivering: 'Delivering',
-  pending: 'Pending',
+  limited: 'Limited Delivering',
   'not-delivering': 'Not Delivering',
 };
 
 const CLASSES: Record<DeliveryStatusProps['status'], string> = {
   delivering: 'text-delivery-status-delivering',
-  pending: 'text-delivery-status-pending',
+  limited: 'text-delivery-status-limited',
   'not-delivering': 'text-delivery-status-not-delivering',
 };
 

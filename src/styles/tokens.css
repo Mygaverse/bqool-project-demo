@@ -126,7 +126,7 @@
   --trend-pill-positive-fg: var(--feedback-success);
   --trend-pill-negative-fg: var(--feedback-danger);
   --delivery-status-delivering: var(--feedback-success);
-  --delivery-status-pending: var(--feedback-warning);
+  --delivery-status-limited: var(--feedback-warning);
   --delivery-status-not-delivering: var(--feedback-danger);
   --status-pill-enabled-bg: var(--action-primary);
   --status-pill-enabled-fg: var(--text-inverse);

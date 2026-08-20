@@ -10,5 +10,5 @@ export default meta;
 type Story = StoryObj<typeof DeliveryStatus>;
 
 export const Delivering: Story = { args: { status: 'delivering' } };
-export const Pending: Story = { args: { status: 'pending' } };
+export const Limited: Story = { args: { status: 'limited' } };
 export const NotDelivering: Story = { args: { status: 'not-delivering' } };

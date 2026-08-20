@@ -88,7 +88,7 @@
   },
   "deliveryStatus": {
     "delivering": { "$type": "color", "$value": "{feedback.success}" },
-    "pending": { "$type": "color", "$value": "{feedback.warning}" },
+    "limited": { "$type": "color", "$value": "{feedback.warning}" },
     "not-delivering": { "$type": "color", "$value": "{feedback.danger}" }
   },
   "statusPill": {

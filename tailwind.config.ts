@@ -62,7 +62,7 @@ const config: Config = {
         },
         'delivery-status': {
           delivering: 'var(--delivery-status-delivering)',
-          pending: 'var(--delivery-status-pending)',
+          limited: 'var(--delivery-status-limited)',
           'not-delivering': 'var(--delivery-status-not-delivering)',
         },
       },
