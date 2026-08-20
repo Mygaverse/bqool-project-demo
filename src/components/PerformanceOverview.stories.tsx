@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { PerformanceOverviewScreen } from './PerformanceOverviewScreen';
 
 const meta: Meta = {
-  title: 'Design System/Screens/Performance Overview',
+  title: 'Design System/Patterns/Performance Overview',
 };
 export default meta;
 

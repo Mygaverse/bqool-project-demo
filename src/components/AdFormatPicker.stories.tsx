@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AdFormatPickerScreen } from './AdFormatPickerScreen';
 
 const meta: Meta = {
-  title: 'Design System/Screens/Ad Format Picker',
+  title: 'Design System/Patterns/Ad Format Picker',
 };
 export default meta;
 
