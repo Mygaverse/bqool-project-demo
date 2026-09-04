@@ -37,6 +37,19 @@ const config = {
         },
       ],
     },
+    scss: {
+      // Bootstrap 5.3 consumes SCSS variables ($brand-500), not CSS custom
+      // properties, so this mirrors the css platform's naming into scss/variables.
+      transforms: [...StyleDictionary.hooks.transformGroups['tokens-studio'], 'name/kebab'],
+      buildPath: 'src/styles/',
+      files: [
+        {
+          destination: 'tokens.scss',
+          format: 'scss/variables',
+          options: { outputReferences: true },
+        },
+      ],
+    },
     js: {
       transformGroup: 'tokens-studio',
       buildPath: 'src/tokens/',
