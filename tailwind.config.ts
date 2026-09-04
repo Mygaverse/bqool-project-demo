@@ -40,6 +40,7 @@ const config: Config = {
           primary: 'var(--action-primary)',
           'primary-hover': 'var(--action-primary-hover)',
           theme: 'var(--action-theme)',
+          'focus-ring': 'var(--action-focus-ring)',
         },
         feedback: {
           success: 'var(--feedback-success)',

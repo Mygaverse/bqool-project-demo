@@ -11,6 +11,7 @@ export function Button({ variant = 'primary', className, style, ...props }: Butt
       style={variant !== 'icon' ? { font: 'var(--typography-body-sm)', ...style } : style}
       className={clsx(
         'inline-flex items-center justify-center gap-token-2 transition-colors',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-action-focus-ring focus-visible:ring-offset-2',
         variant !== 'icon' && 'px-token-4 py-token-2 rounded-token-md',
         variant === 'primary' && 'bg-action-primary text-text-inverse hover:bg-action-primary-hover',
         variant === 'secondary' &&

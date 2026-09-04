@@ -10,15 +10,8 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -34,10 +27,10 @@ jobs:
 
       - name: Fail if committed token output is stale
         run: |
-          if ! git diff --quiet -- src/styles/tokens.css src/tokens/tokens.js; then
-            echo "::error::src/styles/tokens.css / src/tokens/tokens.js are out of date."
+          if ! git diff --quiet -- src/styles/tokens.css src/styles/tokens.scss src/tokens/tokens.js; then
+            echo "::error::src/styles/tokens.css / tokens.scss / src/tokens/tokens.js are out of date."
             echo "Run 'npm run tokens:build' and commit the result."
-            git diff -- src/styles/tokens.css src/tokens/tokens.js
+            git diff -- src/styles/tokens.css src/styles/tokens.scss src/tokens/tokens.js
             exit 1
           fi
 
@@ -61,7 +54,17 @@ jobs:
         with:
           path: storybook-static
 
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy Storybook to GitHub Pages
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         id: deployment
         uses: actions/deploy-pages@v4

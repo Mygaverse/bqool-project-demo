@@ -70,6 +70,7 @@
   --action-secondary: var(--color-white);
   --action-secondary-hover: var(--color-tint-brand);
   --action-theme: var(--color-brand-800);
+  --action-focus-ring: var(--color-brand-500);
   --feedback-success: var(--color-success-500);
   --feedback-warning: var(--color-warning-500);
   --feedback-danger: var(--color-danger-500);

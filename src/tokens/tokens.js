@@ -69,6 +69,7 @@ export const actionPrimaryHover = "#3a9aca";
 export const actionSecondary = "#ffffff";
 export const actionSecondaryHover = "#f1f7ff";
 export const actionTheme = "#0066b7";
+export const actionFocusRing = "#4aaada";
 export const feedbackSuccess = "#76b548";
 export const feedbackWarning = "#ffc107";
 export const feedbackDanger = "#fd625e";
