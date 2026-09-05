@@ -1,0 +1,42 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { ExecutionHistoryTimeline } from './ExecutionHistoryTimeline';
+
+const meta: Meta<typeof ExecutionHistoryTimeline> = {
+  title: 'Design System/Patterns/ExecutionHistoryTimeline',
+  component: ExecutionHistoryTimeline,
+};
+export default meta;
+
+type Story = StoryObj<typeof ExecutionHistoryTimeline>;
+
+export const Completed: Story = {
+  args: {
+    status: 'completed',
+    stages: [
+      { id: 'plan', label: 'Plan', status: 'completed' },
+      { id: 'gather', label: 'Gather evidence', status: 'completed' },
+      { id: 'analyze', label: 'Analyze', status: 'completed' },
+      { id: 'synthesize', label: 'Synthesize', status: 'completed' },
+      { id: 'report', label: 'Report', status: 'completed' },
+    ],
+    events: [
+      { id: 'e1', type: 'task started', timestamp: 'Sep 3, 9:14 AM', summary: 'Started campaign performance audit for the last 14 days.' },
+      { id: 'e2', type: 'evidence gathered', timestamp: 'Sep 3, 9:14 AM', summary: 'Pulled 14 days of campaign, ad group, and search-term stats.' },
+      { id: 'e3', type: 'synthesis complete', timestamp: 'Sep 3, 9:15 AM', summary: 'Ranked 3 findings and 2 recommendations from grounded evidence.' },
+    ],
+  },
+};
+
+export const InProgress: Story = {
+  args: {
+    ...Completed.args,
+    status: 'running',
+    stages: [
+      { id: 'plan', label: 'Plan', status: 'completed' },
+      { id: 'gather', label: 'Gather evidence', status: 'completed' },
+      { id: 'analyze', label: 'Analyze', status: 'active' },
+      { id: 'synthesize', label: 'Synthesize', status: 'pending' },
+      { id: 'report', label: 'Report', status: 'pending' },
+    ],
+  },
+};
