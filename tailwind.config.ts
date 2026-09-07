@@ -205,12 +205,6 @@ const config: Config = {
           'assistant-fg': 'var(--chat-bubble-assistant-fg)',
           'assistant-caption-fg': 'var(--chat-bubble-assistant-caption-fg)',
         },
-        'quick-skill-card': {
-          bg: 'var(--quick-skill-card-bg)',
-          border: 'var(--quick-skill-card-border)',
-          'label-fg': 'var(--quick-skill-card-label-fg)',
-          'description-fg': 'var(--quick-skill-card-description-fg)',
-        },
         'ai-insight-panel': {
           'bg-from': 'var(--ai-insight-panel-bg-from)',
           'bg-via': 'var(--ai-insight-panel-bg-via)',

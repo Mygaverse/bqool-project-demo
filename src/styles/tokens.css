@@ -207,8 +207,6 @@
   --trend-pill-negative-bg: var(--color-overlay-danger-20);
   --chat-bubble-user-bg: var(--color-ai-indigo-600);
   --chat-bubble-user-radius: var(--radius-lg);
-  --quick-skill-card-label-fg: var(--color-ai-indigo-700);
-  --quick-skill-card-radius: var(--radius-lg);
   --ai-insight-panel-bg-from: var(--color-ai-indigo-950);
   --ai-insight-panel-bg-via: var(--color-ai-indigo-900);
   --ai-insight-panel-bg-to: var(--color-ai-blue-900);
@@ -307,9 +305,6 @@
   --chat-bubble-user-fg: var(--text-inverse);
   --chat-bubble-assistant-fg: var(--text-primary);
   --chat-bubble-assistant-caption-fg: var(--text-secondary);
-  --quick-skill-card-bg: var(--surface-default);
-  --quick-skill-card-border: var(--surface-border);
-  --quick-skill-card-description-fg: var(--text-secondary);
   --scope-card-bg: var(--surface-default);
   --kpi-card-bg: var(--surface-default);
   --finding-card-bg: var(--surface-default);
