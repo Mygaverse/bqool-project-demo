@@ -1,3 +1,5 @@
+import { DataHeader } from './DataHeader';
+
 export interface ExecutionStage {
   id: string;
   label: string;
@@ -28,11 +30,17 @@ const DOT: Record<ExecutionStage['status'], string> = {
 export function ExecutionHistoryTimeline({ status, stages, events }: ExecutionHistoryTimelineProps) {
   return (
     <details open className="rounded-token-lg border border-execution-history-card-border bg-execution-history-card-bg p-token-3">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-token-3">
-        <h3 className="text-[10px] font-extrabold uppercase tracking-wide text-execution-history-card-heading-fg">Execution History</h3>
-        <span className="rounded-token-full bg-execution-history-card-status-pill-bg px-token-2 py-1 text-[8px] font-bold uppercase text-execution-history-card-status-pill-fg ring-1 ring-execution-history-card-status-pill-ring">
-          {status}
-        </span>
+      <summary className="cursor-pointer list-none">
+        <DataHeader
+          title="Execution History"
+          size="eyebrow"
+          className="text-execution-history-card-heading-fg"
+          badge={
+            <span className="rounded-token-full bg-execution-history-card-status-pill-bg px-token-2 py-1 text-[8px] font-bold uppercase text-execution-history-card-status-pill-fg ring-1 ring-execution-history-card-status-pill-ring">
+              {status}
+            </span>
+          }
+        />
       </summary>
       <ol className="mt-token-3 grid grid-cols-1 gap-token-2 sm:grid-cols-5">
         {stages.map((stage) => (

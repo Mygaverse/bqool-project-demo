@@ -1,3 +1,4 @@
+import { DataHeader } from './DataHeader';
 import { QuickSkillCard } from './QuickSkillCard';
 
 export interface QuickSkillOption {
@@ -21,12 +22,7 @@ const StarsIcon = () => (
 export function PilotIntroCard({ skills, onSelect }: PilotIntroCardProps) {
   return (
     <div className="flex flex-col gap-token-3 rounded-token-lg border border-surface-border bg-surface-default p-token-6">
-      <div className="flex items-center gap-token-2 text-ai-indigo-600">
-        <StarsIcon />
-        <h3 className="text-text-primary" style={{ font: 'var(--typography-heading-md)' }}>
-          Start with a skill
-        </h3>
-      </div>
+      <DataHeader icon={<StarsIcon />} title="Start with a skill" size="md" />
       <p className="text-text-secondary" style={{ font: 'var(--typography-caption)' }}>
         Choose a pinned workflow or type any question. BQool Pilot routes the right agents and tools automatically.
       </p>

@@ -1,4 +1,5 @@
 import { AIModeBadge } from './AIModeBadge';
+import { DataHeader } from './DataHeader';
 import { ExecutiveSummaryCard } from './ExecutiveSummaryCard';
 import { ExecutionHistoryTimeline } from './ExecutionHistoryTimeline';
 import { ScopeCard } from './ScopeCard';
@@ -80,15 +81,19 @@ const RECOMMENDATIONS = [
 export function BQoolInsightTemplate() {
   return (
     <div className="font-sans flex min-h-screen w-full flex-col gap-token-4 bg-gradient-to-br from-ai-insight-panel-bg-from via-ai-insight-panel-bg-via to-ai-insight-panel-bg-to p-token-5 text-text-inverse">
-      <header className="flex flex-wrap items-center gap-token-3 border-b border-white/10 pb-token-3">
-        <div className="rounded-token-lg border border-ai-insight-panel-header-icon-border bg-ai-insight-panel-header-icon-bg p-token-2 text-ai-indigo-200">
-          <JournalIcon />
-        </div>
-        <div>
-          <h2 className="text-sm font-extrabold tracking-wide">BQool Insight</h2>
-          <p className="mt-0.5 text-[10px] text-ai-indigo-200">Grounded session intelligence, evidence, actions, and reports</p>
-        </div>
-        <AIModeBadge mode="live" inverted />
+      <header className="border-b border-white/10 pb-token-3">
+        <DataHeader
+          icon={
+            <div className="rounded-token-lg border border-ai-insight-panel-header-icon-border bg-ai-insight-panel-header-icon-bg p-token-2">
+              <JournalIcon />
+            </div>
+          }
+          title="BQool Insight"
+          subtitle="Grounded session intelligence, evidence, actions, and reports"
+          badge={<AIModeBadge mode="live" inverted />}
+          size="sm"
+          inverted
+        />
       </header>
 
       <div className="flex flex-col gap-token-4 rounded-token-lg border border-ai-indigo-100 bg-white/95 p-token-4 text-text-primary">
