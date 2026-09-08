@@ -47,7 +47,7 @@ export function BQoolPilotTemplate() {
         <AIModeBadge mode="live" />
         <button
           type="button"
-          className="rounded-token-full bg-gradient-to-r from-ai-indigo-600 via-ai-violet-500 to-ai-blue-500 px-token-3 py-1 text-[10px] font-bold text-text-inverse"
+          className="rounded-token-full bg-insight-nav-pill px-token-3 py-1 text-[10px] font-bold text-text-inverse"
         >
           BQool Insight
         </button>

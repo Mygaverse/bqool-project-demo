@@ -15,6 +15,13 @@ const JournalIcon = () => (
   </svg>
 );
 
+const ClockIcon = () => (
+  <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
+    <circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.3" />
+    <path d="M7 4v3.3L9.2 8.7" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 const STAGES = [
   { id: 'plan', label: 'Plan', status: 'completed' as const },
   { id: 'gather', label: 'Gather evidence', status: 'completed' as const },
@@ -80,7 +87,7 @@ const RECOMMENDATIONS = [
  */
 export function BQoolInsightTemplate() {
   return (
-    <div className="font-sans flex min-h-screen w-full flex-col gap-token-4 bg-gradient-to-br from-ai-insight-panel-bg-from via-ai-insight-panel-bg-via to-ai-insight-panel-bg-to p-token-5 text-text-inverse">
+    <div className="font-sans flex min-h-screen w-full flex-col gap-token-4 bg-ai-insight-panel p-token-5 text-text-inverse">
       <header className="border-b border-white/10 pb-token-3">
         <DataHeader
           icon={
@@ -90,7 +97,18 @@ export function BQoolInsightTemplate() {
           }
           title="BQool Insight"
           subtitle="Grounded session intelligence, evidence, actions, and reports"
-          badge={<AIModeBadge mode="live" inverted />}
+          badge={
+            <div className="flex items-center gap-token-2">
+              <AIModeBadge mode="live" inverted />
+              <a
+                href="#insight-execution-history"
+                className="flex items-center gap-1.5 rounded-token-full border border-ai-indigo-400 bg-execution-history-link px-token-3 py-1.5 text-[10px] font-bold text-text-inverse shadow-resting transition-colors hover:bg-execution-history-link-hover"
+              >
+                <ClockIcon />
+                Execution History
+              </a>
+            </div>
+          }
           size="sm"
           inverted
         />

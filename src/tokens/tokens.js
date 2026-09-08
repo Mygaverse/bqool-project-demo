@@ -260,11 +260,16 @@ export const chatBubbleUserFg = "#ffffff";
 export const chatBubbleUserRadius = "10px";
 export const chatBubbleAssistantFg = "#212529";
 export const chatBubbleAssistantCaptionFg = "#5a6b7a";
-export const aiInsightPanelBgFrom = "#1e1b4b";
-export const aiInsightPanelBgVia = "#312e81";
-export const aiInsightPanelBgTo = "#1e3a8a";
+export const aiInsightPanelBackground =
+  "linear-gradient(to bottom right, #1e1b4b 0%, #312e81 50%, #1e3a8a 100%)";
 export const aiInsightPanelHeaderIconBg = "rgba(255, 255, 255, 0.1)";
 export const aiInsightPanelHeaderIconBorder = "rgba(255, 255, 255, 0.2)";
+export const gradientInsightNavPill =
+  "linear-gradient(90deg, #4f46e5 0%, #8b5cf6 50%, #3b82f6 100%)";
+export const gradientExecutionHistoryLink =
+  "linear-gradient(90deg, #6366f1 0%, #3b82f6 100%)";
+export const gradientExecutionHistoryLinkHover =
+  "linear-gradient(90deg, #4f46e5 0%, #2563eb 100%)";
 export const executionHistoryCardBg = "rgba(238, 242, 255, 0.6)";
 export const executionHistoryCardBorder = "#e0e7ff";
 export const executionHistoryCardHeadingFg = "#3730a3";

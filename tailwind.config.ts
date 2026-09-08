@@ -206,9 +206,6 @@ const config: Config = {
           'assistant-caption-fg': 'var(--chat-bubble-assistant-caption-fg)',
         },
         'ai-insight-panel': {
-          'bg-from': 'var(--ai-insight-panel-bg-from)',
-          'bg-via': 'var(--ai-insight-panel-bg-via)',
-          'bg-to': 'var(--ai-insight-panel-bg-to)',
           'header-icon-bg': 'var(--ai-insight-panel-header-icon-bg)',
           'header-icon-border': 'var(--ai-insight-panel-header-icon-border)',
         },
@@ -271,6 +268,12 @@ const config: Config = {
           'solid-bg': 'var(--generate-report-panel-solid-bg)',
           'solid-bg-hover': 'var(--generate-report-panel-solid-bg-hover)',
         },
+      },
+      backgroundImage: {
+        'ai-insight-panel': 'var(--ai-insight-panel-background)',
+        'insight-nav-pill': 'var(--gradient-insight-nav-pill)',
+        'execution-history-link': 'var(--gradient-execution-history-link)',
+        'execution-history-link-hover': 'var(--gradient-execution-history-link-hover)',
       },
       spacing: {
         'token-1': 'var(--space-1)',

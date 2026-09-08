@@ -207,11 +207,12 @@
   --trend-pill-negative-bg: var(--color-overlay-danger-20);
   --chat-bubble-user-bg: var(--color-ai-indigo-600);
   --chat-bubble-user-radius: var(--radius-lg);
-  --ai-insight-panel-bg-from: var(--color-ai-indigo-950);
-  --ai-insight-panel-bg-via: var(--color-ai-indigo-900);
-  --ai-insight-panel-bg-to: var(--color-ai-blue-900);
+  --ai-insight-panel-background: linear-gradient(to bottom right, var(--color-ai-indigo-950) 0%, var(--color-ai-indigo-900) 50%, var(--color-ai-blue-900) 100%);
   --ai-insight-panel-header-icon-bg: var(--color-overlay-ai-white-10);
   --ai-insight-panel-header-icon-border: var(--color-overlay-ai-white-20);
+  --gradient-insight-nav-pill: linear-gradient(90deg, var(--color-ai-indigo-600) 0%, var(--color-ai-violet-500) 50%, var(--color-ai-blue-500) 100%);
+  --gradient-execution-history-link: linear-gradient(90deg, var(--color-ai-indigo-500) 0%, var(--color-ai-blue-500) 100%);
+  --gradient-execution-history-link-hover: linear-gradient(90deg, var(--color-ai-indigo-600) 0%, var(--color-ai-blue-600) 100%);
   --execution-history-card-bg: var(--color-overlay-ai-indigo-60);
   --execution-history-card-border: var(--color-ai-indigo-100);
   --execution-history-card-heading-fg: var(--color-ai-indigo-800);

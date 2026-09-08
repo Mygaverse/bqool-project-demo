@@ -29,7 +29,7 @@ const DOT: Record<ExecutionStage['status'], string> = {
 /** BQool Insight's collapsible execution timeline — a 5-stage grid plus a nested "Audit events" disclosure. */
 export function ExecutionHistoryTimeline({ status, stages, events }: ExecutionHistoryTimelineProps) {
   return (
-    <details open className="rounded-token-lg border border-execution-history-card-border bg-execution-history-card-bg p-token-3">
+    <details id="insight-execution-history" open className="rounded-token-lg border border-execution-history-card-border bg-execution-history-card-bg p-token-3">
       <summary className="cursor-pointer list-none">
         <DataHeader
           title="Execution History"
