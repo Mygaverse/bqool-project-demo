@@ -30,6 +30,12 @@ const NewChatIcon = () => (
   </svg>
 );
 
+const StarsIcon = () => (
+  <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor">
+    <path d="M8 1.5 9.2 5.8 13.5 7 9.2 8.2 8 12.5 6.8 8.2 2.5 7 6.8 5.8 8 1.5Z" />
+  </svg>
+);
+
 /**
  * Template: Option A — BQool Pilot's default/idle panel, a bottom-right-corner
  * popup in the real product. Chat-first: header (title, AI mode, the "BQool
@@ -47,9 +53,14 @@ export function BQoolPilotTemplate() {
         <AIModeBadge mode="live" />
         <button
           type="button"
-          className="rounded-token-full bg-insight-nav-pill px-token-3 py-1 text-[10px] font-bold text-text-inverse"
+          className="relative flex items-center gap-1.5 overflow-hidden rounded-token-md border border-insight-nav-pill-border px-token-3 py-1.5 text-[10px] font-bold text-text-inverse"
         >
-          BQool Insight
+          <span className="absolute inset-0 bg-insight-nav-pill" aria-hidden="true" />
+          <span className="absolute inset-0 animate-border-flow bg-insight-nav-pill-shimmer bg-[length:200%_100%]" aria-hidden="true" />
+          <span className="relative z-10 flex items-center text-ai-indigo-100">
+            <StarsIcon />
+          </span>
+          <span className="relative z-10 whitespace-nowrap">BQool Insight</span>
         </button>
         <button type="button" aria-label="Settings" className="rounded-token-md p-1.5 text-text-secondary hover:bg-surface-subtle">
           <SettingsIcon />

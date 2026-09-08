@@ -34,6 +34,8 @@ export const colorOverlayAiRose30 = "rgba(254, 205, 211, 0.3)";
 export const colorOverlayAiIndigo60 = "rgba(238, 242, 255, 0.6)";
 export const colorOverlayAiWhite10 = "rgba(255, 255, 255, 0.1)";
 export const colorOverlayAiWhite20 = "rgba(255, 255, 255, 0.2)";
+export const colorOverlayAiWhite30 = "rgba(255, 255, 255, 0.3)";
+export const colorOverlayAiIndigo50060 = "rgba(99, 102, 241, 0.6)";
 export const colorAiIndigo50 = "#eef2ff";
 export const colorAiIndigo100 = "#e0e7ff";
 export const colorAiIndigo200 = "#c7d2fe";
@@ -270,6 +272,8 @@ export const gradientExecutionHistoryLink =
   "linear-gradient(90deg, #6366f1 0%, #3b82f6 100%)";
 export const gradientExecutionHistoryLinkHover =
   "linear-gradient(90deg, #4f46e5 0%, #2563eb 100%)";
+export const gradientInsightNavPillShimmer =
+  "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%)";
 export const executionHistoryCardBg = "rgba(238, 242, 255, 0.6)";
 export const executionHistoryCardBorder = "#e0e7ff";
 export const executionHistoryCardHeadingFg = "#3730a3";

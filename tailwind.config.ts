@@ -66,6 +66,7 @@ const config: Config = {
           limited: 'var(--delivery-status-limited)',
           'not-delivering': 'var(--delivery-status-not-delivering)',
         },
+        'insight-nav-pill-border': 'var(--color-overlay-ai-indigo-500-60)',
         // AI Pilot feature accent scales — bqool-demo's Pilot/Insight surfaces use
         // Tailwind's default indigo/blue/slate/emerald/amber/sky/rose hues directly,
         // a distinct palette from the rest of the dashboard's brand/grey/feedback tokens.
@@ -272,8 +273,18 @@ const config: Config = {
       backgroundImage: {
         'ai-insight-panel': 'var(--ai-insight-panel-background)',
         'insight-nav-pill': 'var(--gradient-insight-nav-pill)',
+        'insight-nav-pill-shimmer': 'var(--gradient-insight-nav-pill-shimmer)',
         'execution-history-link': 'var(--gradient-execution-history-link)',
         'execution-history-link-hover': 'var(--gradient-execution-history-link-hover)',
+      },
+      keyframes: {
+        'border-flow': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '200% 50%' },
+        },
+      },
+      animation: {
+        'border-flow': 'border-flow 4s linear infinite',
       },
       spacing: {
         'token-1': 'var(--space-1)',

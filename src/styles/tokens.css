@@ -35,6 +35,8 @@
   --color-overlay-ai-indigo-60: rgba(238, 242, 255, 0.6);
   --color-overlay-ai-white-10: rgba(255, 255, 255, 0.1);
   --color-overlay-ai-white-20: rgba(255, 255, 255, 0.2);
+  --color-overlay-ai-white-30: rgba(255, 255, 255, 0.3);
+  --color-overlay-ai-indigo-500-60: rgba(99, 102, 241, 0.6);
   --color-ai-indigo-50: #eef2ff;
   --color-ai-indigo-100: #e0e7ff;
   --color-ai-indigo-200: #c7d2fe;
@@ -213,6 +215,7 @@
   --gradient-insight-nav-pill: linear-gradient(90deg, var(--color-ai-indigo-600) 0%, var(--color-ai-violet-500) 50%, var(--color-ai-blue-500) 100%);
   --gradient-execution-history-link: linear-gradient(90deg, var(--color-ai-indigo-500) 0%, var(--color-ai-blue-500) 100%);
   --gradient-execution-history-link-hover: linear-gradient(90deg, var(--color-ai-indigo-600) 0%, var(--color-ai-blue-600) 100%);
+  --gradient-insight-nav-pill-shimmer: linear-gradient(90deg, transparent 0%, var(--color-overlay-ai-white-30) 50%, transparent 100%);
   --execution-history-card-bg: var(--color-overlay-ai-indigo-60);
   --execution-history-card-border: var(--color-ai-indigo-100);
   --execution-history-card-heading-fg: var(--color-ai-indigo-800);
