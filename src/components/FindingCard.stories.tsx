@@ -19,13 +19,34 @@ export const Critical: Story = {
   },
 };
 
-export const Warning: Story = {
+export const WithTagsMetricsAndEvidence: Story = {
+  args: {
+    rank: 1,
+    title: 'premium phone accessories',
+    tags: ['Review', 'High priority', 'Evidence review'],
+    severity: 'warning',
+    metrics: [
+      { label: 'ACOS', value: '38.66%' },
+      { label: 'ROAS', value: '2.59x' },
+      { label: 'Spend', value: '$44.06' },
+      { label: 'Sales', value: '$113.97' },
+    ],
+    detail: 'SALES: $113.97 | SPEND: $44.06 | ACOS: 38.66% | ROAS: 2.59x | ORDERS: 0 | CVR: 0% — ACOS is 8.66 points above the 30% target; ROAS is 0.91x below the 3.5x target.',
+    agent: 'Keywords Agent · Keyword Opportunity Finder',
+    evidenceCount: 1,
+    onReviewEvidence: () => {},
+  },
+};
+
+export const TagsOnlyNoMetricsOrSeverity: Story = {
   args: {
     rank: 2,
-    title: '$212 spent on non-converting search terms',
-    severity: 'warning',
-    detail: '14 search terms with 0 conversions accounted for 12% of Sponsored Products spend.',
-    agent: 'Keyword Opportunity Finder · Search-term waste',
+    title: 'Review efficiency driver for SP | Core Products | Manual',
+    tags: ['Review', 'High priority', 'Evidence review'],
+    detail: 'The cited entity shows the strongest observed efficiency risk and should be investigated before any simulated adjustment.',
+    agent: '1 evidence record · 1 entity · 5 observed days · Low evidence support',
+    evidenceCount: 1,
+    onReviewEvidence: () => {},
   },
 };
 

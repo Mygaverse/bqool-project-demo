@@ -22,6 +22,22 @@ const ClockIcon = () => (
   </svg>
 );
 
+const ShieldIcon = () => (
+  <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+    <path d="M7 1.5 12 3.3v3.4c0 3-2.1 5.2-5 6.1-2.9-.9-5-3.1-5-6.1V3.3L7 1.5Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+    <path d="M4.8 7 6.3 8.5 9.2 5.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+function InventoryItem({ label, value }: { label: string; value: number }) {
+  return (
+    <div className="rounded-token-lg bg-surface-default px-token-3 py-token-2 text-center ring-1 ring-ai-slate-200">
+      <p className="text-base font-extrabold text-ai-slate-900">{value}</p>
+      <p className="text-[8px] font-bold uppercase tracking-wide text-ai-slate-400">{label}</p>
+    </div>
+  );
+}
+
 const STAGES = [
   { id: 'plan', label: 'Plan', status: 'completed' as const },
   { id: 'gather', label: 'Gather evidence', status: 'completed' as const },
@@ -40,9 +56,18 @@ const FINDINGS = [
   {
     rank: 1,
     title: 'ACOS rose 18% week-over-week',
+    tags: ['Review', 'High priority', 'Evidence review'],
     severity: 'critical' as const,
+    metrics: [
+      { label: 'ACOS', value: '38.66%' },
+      { label: 'ROAS', value: '2.59x' },
+      { label: 'Spend', value: '$44.06' },
+      { label: 'Sales', value: '$113.97' },
+    ],
     detail: 'Sponsored Products ACOS climbed from 24.1% to 28.4%, driven by two campaigns with rising CPCs.',
     agent: 'Performance Analyzer · Campaign audit',
+    evidenceCount: 1,
+    onReviewEvidence: () => {},
   },
   {
     rank: 2,
@@ -160,6 +185,16 @@ export function BQoolInsightTemplate() {
         </section>
 
         <GenerateReportPanel />
+
+        <section className="rounded-token-lg bg-ai-slate-50 p-token-3">
+          <DataHeader icon={<ShieldIcon />} title="Structured Report Inventory" size="eyebrow" className="text-ai-indigo-700" />
+          <div className="mt-token-3 grid grid-cols-2 gap-token-2 sm:grid-cols-4">
+            <InventoryItem label="Findings" value={FINDINGS.length} />
+            <InventoryItem label="Recommendations" value={RECOMMENDATIONS.length} />
+            <InventoryItem label="Action plans" value={1} />
+            <InventoryItem label="Artifacts" value={0} />
+          </div>
+        </section>
       </div>
     </div>
   );
