@@ -61,6 +61,7 @@ $color-ai-slate-400: #94a3b8;
 $color-ai-slate-500: #64748b;
 $color-ai-slate-600: #475569;
 $color-ai-slate-700: #334155;
+$color-ai-slate-800: #1e293b;
 $color-ai-slate-900: #0f172a;
 $color-ai-emerald-50: #ecfdf5;
 $color-ai-emerald-100: #d1fae5;
@@ -214,6 +215,7 @@ $gradient-insight-nav-pill: linear-gradient(90deg, $color-ai-indigo-600 0%, $col
 $gradient-execution-history-link: linear-gradient(90deg, $color-ai-indigo-500 0%, $color-ai-blue-500 100%);
 $gradient-execution-history-link-hover: linear-gradient(90deg, $color-ai-indigo-600 0%, $color-ai-blue-600 100%);
 $gradient-insight-nav-pill-shimmer: linear-gradient(90deg, transparent 0%, $color-overlay-ai-white-30 50%, transparent 100%);
+$gradient-pilot-header: linear-gradient(90deg, $color-ai-indigo-600 0%, $color-ai-blue-600 100%);
 $execution-history-card-bg: $color-overlay-ai-indigo-60;
 $execution-history-card-border: $color-ai-indigo-100;
 $execution-history-card-heading-fg: $color-ai-indigo-800;

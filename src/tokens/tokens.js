@@ -62,6 +62,7 @@ export const colorAiSlate400 = "#94a3b8";
 export const colorAiSlate500 = "#64748b";
 export const colorAiSlate600 = "#475569";
 export const colorAiSlate700 = "#334155";
+export const colorAiSlate800 = "#1e293b";
 export const colorAiSlate900 = "#0f172a";
 export const colorAiEmerald50 = "#ecfdf5";
 export const colorAiEmerald100 = "#d1fae5";
@@ -274,6 +275,8 @@ export const gradientExecutionHistoryLinkHover =
   "linear-gradient(90deg, #4f46e5 0%, #2563eb 100%)";
 export const gradientInsightNavPillShimmer =
   "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%)";
+export const gradientPilotHeader =
+  "linear-gradient(90deg, #4f46e5 0%, #2563eb 100%)";
 export const executionHistoryCardBg = "rgba(238, 242, 255, 0.6)";
 export const executionHistoryCardBorder = "#e0e7ff";
 export const executionHistoryCardHeadingFg = "#3730a3";

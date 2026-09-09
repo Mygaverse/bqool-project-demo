@@ -63,6 +63,7 @@
   --color-ai-slate-500: #64748b;
   --color-ai-slate-600: #475569;
   --color-ai-slate-700: #334155;
+  --color-ai-slate-800: #1e293b;
   --color-ai-slate-900: #0f172a;
   --color-ai-emerald-50: #ecfdf5;
   --color-ai-emerald-100: #d1fae5;
@@ -216,6 +217,7 @@
   --gradient-execution-history-link: linear-gradient(90deg, var(--color-ai-indigo-500) 0%, var(--color-ai-blue-500) 100%);
   --gradient-execution-history-link-hover: linear-gradient(90deg, var(--color-ai-indigo-600) 0%, var(--color-ai-blue-600) 100%);
   --gradient-insight-nav-pill-shimmer: linear-gradient(90deg, transparent 0%, var(--color-overlay-ai-white-30) 50%, transparent 100%);
+  --gradient-pilot-header: linear-gradient(90deg, var(--color-ai-indigo-600) 0%, var(--color-ai-blue-600) 100%);
   --execution-history-card-bg: var(--color-overlay-ai-indigo-60);
   --execution-history-card-border: var(--color-ai-indigo-100);
   --execution-history-card-heading-fg: var(--color-ai-indigo-800);

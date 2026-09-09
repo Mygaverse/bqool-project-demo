@@ -101,6 +101,7 @@ const config: Config = {
           500: 'var(--color-ai-slate-500)',
           600: 'var(--color-ai-slate-600)',
           700: 'var(--color-ai-slate-700)',
+          800: 'var(--color-ai-slate-800)',
           900: 'var(--color-ai-slate-900)',
         },
         'ai-emerald': {
@@ -276,6 +277,7 @@ const config: Config = {
         'insight-nav-pill-shimmer': 'var(--gradient-insight-nav-pill-shimmer)',
         'execution-history-link': 'var(--gradient-execution-history-link)',
         'execution-history-link-hover': 'var(--gradient-execution-history-link-hover)',
+        'pilot-header': 'var(--gradient-pilot-header)',
       },
       keyframes: {
         'border-flow': {

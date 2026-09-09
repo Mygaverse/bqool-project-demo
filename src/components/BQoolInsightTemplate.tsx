@@ -7,6 +7,7 @@ import { KpiCard } from './KpiCard';
 import { FindingCard } from './FindingCard';
 import { RecommendationCard } from './RecommendationCard';
 import { GenerateReportPanel } from './GenerateReportPanel';
+import { StatusCard } from './StatusCard';
 
 const JournalIcon = () => (
   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -29,6 +30,12 @@ const ShieldIcon = () => (
   </svg>
 );
 
+const ChevronDownIcon = () => (
+  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+    <path d="M2 3.5 5 6.5 8 3.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 function InventoryItem({ label, value }: { label: string; value: number }) {
   return (
     <div className="rounded-token-lg bg-surface-default px-token-3 py-token-2 text-center ring-1 ring-ai-slate-200">
@@ -39,11 +46,11 @@ function InventoryItem({ label, value }: { label: string; value: number }) {
 }
 
 const STAGES = [
-  { id: 'plan', label: 'Plan', status: 'completed' as const },
-  { id: 'gather', label: 'Gather evidence', status: 'completed' as const },
-  { id: 'analyze', label: 'Analyze', status: 'completed' as const },
-  { id: 'synthesize', label: 'Synthesize', status: 'completed' as const },
-  { id: 'report', label: 'Report', status: 'completed' as const },
+  { id: 'understand', label: 'Understand request', status: 'completed' as const },
+  { id: 'prepare', label: 'Prepare task plan', status: 'completed' as const },
+  { id: 'retrieve', label: 'Retrieve evidence', status: 'completed' as const },
+  { id: 'analyze', label: 'Analyze findings', status: 'completed' as const },
+  { id: 'respond', label: 'Prepare response', status: 'completed' as const },
 ];
 
 const EVENTS = [
@@ -132,6 +139,15 @@ export function BQoolInsightTemplate() {
                 <ClockIcon />
                 Execution History
               </a>
+              <button
+                type="button"
+                aria-haspopup="listbox"
+                className="flex items-center gap-1.5 rounded-token-md border border-white/15 bg-white/10 px-token-3 py-1.5 text-[10px] font-bold text-text-inverse hover:bg-white/15"
+              >
+                <ClockIcon />
+                <span className="max-w-40 truncate">Find wasteful search...</span>
+                <ChevronDownIcon />
+              </button>
             </div>
           }
           size="sm"
@@ -158,8 +174,13 @@ export function BQoolInsightTemplate() {
         </section>
 
         <section>
-          <h3 className="mb-token-2 text-[10px] font-extrabold uppercase tracking-wide text-ai-slate-500">KPI Snapshot</h3>
-          <div className="grid grid-cols-2 gap-token-2 lg:grid-cols-3">
+          <DataHeader
+            title="KPI Snapshot"
+            size="eyebrow"
+            className="text-ai-slate-500"
+            badge={<span className="text-[9px] font-semibold text-ai-slate-400">10 grounded evidence records</span>}
+          />
+          <div className="mt-token-2 grid grid-cols-2 gap-token-2 lg:grid-cols-3">
             <KpiCard label="ACOS" value="28.4%" />
             <KpiCard label="Ad Spend" value="$1,704.35" />
             <KpiCard label="Ad Sales" value="$6,512.20" />
@@ -167,8 +188,13 @@ export function BQoolInsightTemplate() {
         </section>
 
         <section>
-          <h3 className="mb-token-2 text-[10px] font-extrabold uppercase tracking-wide text-ai-slate-500">Ranked Findings</h3>
-          <div className="flex flex-col gap-token-2">
+          <DataHeader
+            title="Ranked Findings"
+            size="eyebrow"
+            className="text-ai-slate-500"
+            badge={<span className="text-[9px] font-semibold text-ai-slate-400">Ranked by business severity</span>}
+          />
+          <div className="mt-token-2 flex flex-col gap-token-2">
             {FINDINGS.map((finding) => (
               <FindingCard key={finding.rank} {...finding} />
             ))}
@@ -176,7 +202,12 @@ export function BQoolInsightTemplate() {
         </section>
 
         <section className="rounded-token-lg border border-recommendation-card-border bg-recommendation-card-bg p-token-3">
-          <h3 className="text-[10px] font-extrabold uppercase tracking-wide text-recommendation-card-heading-fg">Recommended Next Steps</h3>
+          <DataHeader
+            title="Recommended Next Steps"
+            size="eyebrow"
+            className="text-recommendation-card-heading-fg"
+            badge={<span className="text-[9px] font-semibold text-ai-blue-500">Live action-plan status</span>}
+          />
           <div className="mt-token-2 flex flex-col gap-token-2">
             {RECOMMENDATIONS.map((recommendation) => (
               <RecommendationCard key={recommendation.index} {...recommendation} />
@@ -185,6 +216,12 @@ export function BQoolInsightTemplate() {
         </section>
 
         <GenerateReportPanel />
+
+        <section className="grid grid-cols-1 gap-token-2 sm:grid-cols-3">
+          <StatusCard label="Provider" value="Deterministic" detail="degraded" />
+          <StatusCard label="Execution" value="Completed" detail="10 evidence · 3 findings" />
+          <StatusCard label="Confidence" value="Low Evidence Confidence" detail="At least one cited data source is stale." />
+        </section>
 
         <section className="rounded-token-lg bg-ai-slate-50 p-token-3">
           <DataHeader icon={<ShieldIcon />} title="Structured Report Inventory" size="eyebrow" className="text-ai-indigo-700" />

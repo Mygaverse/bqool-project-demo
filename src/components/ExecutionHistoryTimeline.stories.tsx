@@ -13,11 +13,11 @@ export const Completed: Story = {
   args: {
     status: 'completed',
     stages: [
-      { id: 'plan', label: 'Plan', status: 'completed' },
-      { id: 'gather', label: 'Gather evidence', status: 'completed' },
-      { id: 'analyze', label: 'Analyze', status: 'completed' },
-      { id: 'synthesize', label: 'Synthesize', status: 'completed' },
-      { id: 'report', label: 'Report', status: 'completed' },
+      { id: 'understand', label: 'Understand request', status: 'completed' },
+      { id: 'prepare', label: 'Prepare task plan', status: 'completed' },
+      { id: 'retrieve', label: 'Retrieve evidence', status: 'completed' },
+      { id: 'analyze', label: 'Analyze findings', status: 'completed' },
+      { id: 'respond', label: 'Prepare response', status: 'completed' },
     ],
     events: [
       { id: 'e1', type: 'task started', timestamp: 'Sep 3, 9:14 AM', summary: 'Started campaign performance audit for the last 14 days.' },
@@ -32,11 +32,11 @@ export const InProgress: Story = {
     ...Completed.args,
     status: 'running',
     stages: [
-      { id: 'plan', label: 'Plan', status: 'completed' },
-      { id: 'gather', label: 'Gather evidence', status: 'completed' },
-      { id: 'analyze', label: 'Analyze', status: 'active' },
-      { id: 'synthesize', label: 'Synthesize', status: 'pending' },
-      { id: 'report', label: 'Report', status: 'pending' },
+      { id: 'understand', label: 'Understand request', status: 'completed' },
+      { id: 'prepare', label: 'Prepare task plan', status: 'completed' },
+      { id: 'retrieve', label: 'Retrieve evidence', status: 'active' },
+      { id: 'analyze', label: 'Analyze findings', status: 'pending' },
+      { id: 'respond', label: 'Prepare response', status: 'pending' },
     ],
   },
 };
